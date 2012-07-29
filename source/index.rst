@@ -13,11 +13,13 @@ Contents:
 
    history
    skill
+   bookreview
 
 Indices and tables
 ==================
 
 * :ref:`genindex`
 * :ref:`search`
+
 .. * :ref:`modindex`
 
