@@ -6,6 +6,7 @@
    :maxdepth: 1
 
    review/little_bets
+   review/need_to_google
 
 
 書評書いてないけど読んだ本
@@ -30,3 +31,4 @@ jan/2012
 Mar/2012
 --------
 - `Amazon.co.jp： 読むだけですっきりわかる世界史 近代編　コロンブスから南北戦争まで <http://www.amazon.co.jp/dp/4796678158/>`_
+- `Amazon.co.jp： インサイド・アップル: アダム・ラシンスキー, 依田 卓巳: 本 <http://www.amazon.co.jp/dp/4152092831/>`_
