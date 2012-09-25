@@ -12,6 +12,7 @@ Contents:
    :maxdepth: 2
 
    history
+   pg_history
    skill
    bookreview
 
