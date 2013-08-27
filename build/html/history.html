@@ -27,7 +27,7 @@
     <script type="text/javascript" src="static/doctools.js"></script>
     <link rel="top" title="my history 0.0.1 documentation" href="index.html" />
     <link rel="next" title="プログラミング履歴" href="pg_history.html" />
-    <link rel="prev" title="Welcome to my history’s documentation!" href="index.html" /> 
+    <link rel="prev" title="自分のプログラミングとか読書の歴史" href="index.html" /> 
   </head>
   <body>
     <div class="header-wrapper">
@@ -35,7 +35,7 @@
         <div class="headertitle"><a
           href="index.html">my history 0.0.1 documentation</a></div>
         <div class="rel">
-          <a href="index.html" title="Welcome to my history’s documentation!"
+          <a href="index.html" title="自分のプログラミングとか読書の歴史"
              accesskey="P">previous</a> |
           <a href="pg_history.html" title="プログラミング履歴"
              accesskey="N">next</a> |
@@ -57,6 +57,8 @@
 <h1>職務経歴<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="before-2009">
 <h2>before 2009年<a class="headerlink" href="#before-2009" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id2">
+<h3>専攻・研究室<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
 <ul>
 <li><dl class="first docutils">
 <dt>大学時代の専攻は光物性</dt>
@@ -70,30 +72,98 @@
 </li>
 </ul>
 </div>
-<div class="section" id="id2">
-<h2>2009年<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="id3">
+<h2>2009年<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li>4月入社</li>
 <li>7月配属</li>
 </ul>
 </div>
-<div class="section" id="id3">
-<h2>2010年<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
-<ul class="simple">
-<li>4月</li>
-</ul>
-</div>
 <div class="section" id="id4">
-<h2>2011年<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h2>
+<h2>2010年<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li>4月</li>
 </ul>
 </div>
 <div class="section" id="id5">
-<h2>2012年<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h2>
+<h2>2011年<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li>4月</li>
 </ul>
+</div>
+<div class="section" id="id6">
+<h2>2012年<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>4月</li>
+</ul>
+<div class="section" id="id7">
+<h3>10-12月<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h3>
+<ul>
+<li><p class="first">システム設計</p>
+</li>
+<li><p class="first">設計ドキュメントを sphinx で書いてみた。</p>
+<p>社内システムがいろいろイケてないのでエンジニア
+かつpythonistaらしく書けるものを選んだ</p>
+</li>
+<li><p class="first">Redisのキー設計</p>
+</li>
+<li><p class="first">MySQLのテーブル設計
+今思うとテーブル設計間違ってたわ。</p>
+<p>主キーのところ、動いてるけど長いわw</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="section" id="id8">
+<h2>2013年<a class="headerlink" href="#id8" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id9">
+<h3>1-3月<a class="headerlink" href="#id9" title="Permalink to this headline">¶</a></h3>
+<ul>
+<li><p class="first"><cite>Flask</cite> (python 製のマイクロフレームワーク)で <cite>REST API</cite> を含む一連のバックエンド開発</p>
+</li>
+<li><p class="first">構成としては以下の感じ。</p>
+<p>Flaskで作ったWebAPIサーバー - MySQL - Redis (大体、こんな感じ。)</p>
+</li>
+<li><p class="first"><cite>supervisor</cite> 使ったけど monit よりも使いやすいかも。
+日本語情報はどちらもあまりないので好みの問題かも。
+daemontools よりも絶対シンプル</p>
+</li>
+<li><p class="first">Flaskについての雑感
+拡張はCache、 Debug-Toolbar (DTB) を使ってみた。
+この2つは使えた。 Cacheは数行追加するだけで簡単にキャッシュ使えるし、
+DTBはREST API作るときもプロファイリング機能とか役立つ機能満載でかなり助けられた。</p>
+</li>
+<li><p class="first">チームでPHP使ってたときはFWのたぐい一切使ってなかったけど、
+Flask触っていろんな機能に出会えて目からウロコが落ちる思いがした。</p>
+</li>
+<li><p class="first">あと、Flaskって test_client ってメソッドがあるから
+テストしやすい。</p>
+<p>PHP では出来なかった WebAPI のコードのカバレッジ率出せるのは感動した。</p>
+</li>
+<li><dl class="first docutils">
+<dt>既存のスクリプトの回収</dt>
+<dd><ul class="first last simple">
+<li>ヘタに msgpack-rpc かましていて遅くなっていたシステムを改修</li>
+<li>直接 MySQL へつなぎにいく構成に変更</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><p class="first">resweb にプルリクエスト送ったけど、
+あんまり英語でちゃんと説明出来ないの無視されとる。</p>
+</li>
+<li><p class="first">resweb は失敗したキューの再処理機能があってちゃんと使いたいモジュールだった。
+エラー処理は甘かったのでプルリクエストいっぱい送りながら改善していきたい。</p>
+</li>
+</ul>
+</div>
+<div class="section" id="id10">
+<h3>4月<a class="headerlink" href="#id10" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>予定</li>
+</ul>
+</div>
 </div>
 </div>
 
@@ -107,15 +177,15 @@
           <ul class="current">
 <li class="toctree-l1 current"><a class="current reference internal" href="">職務経歴</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#before-2009">before 2009年</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#id2">2009年</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#id3">2010年</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#id4">2011年</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#id5">2012年</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id3">2009年</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id4">2010年</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id5">2011年</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id6">2012年</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id8">2013年</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="pg_history.html">プログラミング履歴</a></li>
 <li class="toctree-l1"><a class="reference internal" href="skill.html">技術スキル</a></li>
-<li class="toctree-l1"><a class="reference internal" href="bookreview.html">書評</a></li>
 </ul>
 
           <h3 style="margin-top: 1.5em;">Search</h3>
@@ -136,7 +206,7 @@
     <div class="footer-wrapper">
       <div class="footer">
         <div class="left">
-          <a href="index.html" title="Welcome to my history’s documentation!"
+          <a href="index.html" title="自分のプログラミングとか読書の歴史"
              >previous</a> |
           <a href="pg_history.html" title="プログラミング履歴"
              >next</a> |

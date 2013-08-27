@@ -2,9 +2,11 @@
    sphinx-quickstart on Mon Jul 30 00:37:20 2012.
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
+    Welcome to my history's documentation!
+    ======================================
 
-Welcome to my history's documentation!
-======================================
+自分のプログラミングとか読書の歴史
+==================================
 
 Contents:
 
@@ -14,7 +16,6 @@ Contents:
    history
    pg_history
    skill
-   bookreview
 
 Indices and tables
 ==================
