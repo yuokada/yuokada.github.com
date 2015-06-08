@@ -1,4 +1,4 @@
 [submodule "build/html"]
 	path = build/html
-	url = git@github.com:yuokada/yuokada.github.com.git
+	url = https://github.com/yuokada/yuokada.github.com.git
 	branch = gh-pages
