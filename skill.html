@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 
 
@@ -8,27 +7,27 @@
     
     <title>技術スキル &mdash; my history 1.0 documentation</title>
     
-    <link rel="stylesheet" href="static/basic.css" type="text/css" />
-    <link rel="stylesheet" href="static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="static/bootswatch-3.3.4/cosmo/bootstrap.min.css" type="text/css" />
-    <link rel="stylesheet" href="static/bootstrap-sphinx.css" type="text/css" />
+    <link rel="stylesheet" href="_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootswatch-3.3.4/cosmo/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-sphinx.css" type="text/css" />
     
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
-        URL_ROOT:    '',
+        URL_ROOT:    './',
         VERSION:     '1.0',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
       };
     </script>
-    <script type="text/javascript" src="static/jquery.js"></script>
-    <script type="text/javascript" src="static/underscore.js"></script>
-    <script type="text/javascript" src="static/doctools.js"></script>
-    <script type="text/javascript" src="static/js/jquery-1.11.0.min.js"></script>
-    <script type="text/javascript" src="static/js/jquery-fix.js"></script>
-    <script type="text/javascript" src="static/bootstrap-3.3.4/js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="static/bootstrap-sphinx.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-3.3.4/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-sphinx.js"></script>
     <link rel="top" title="my history 1.0 documentation" href="index.html" />
     <link rel="prev" title="プログラミング履歴" href="pg_history.html" />
 <meta charset='utf-8'>
@@ -37,7 +36,7 @@
 <meta name="apple-mobile-web-app-capable" content="yes">
 
   </head>
-  <body>
+  <body role="document">
 
   <div id="navbar" class="navbar navbar-default navbar-fixed-top">
     <div class="container">
@@ -87,11 +86,26 @@
 <li><a class="reference internal" href="#php">PHP</a></li>
 <li><a class="reference internal" href="#perl">Perl</a></li>
 <li><a class="reference internal" href="#python">Python</a></li>
+<li><a class="reference internal" href="#ruby">Ruby</a></li>
 </ul>
 </li>
 <li><a class="reference internal" href="#midleware">Midleware</a><ul>
 <li><a class="reference internal" href="#mysql">MySQL</a></li>
 <li><a class="reference internal" href="#cassandra">Cassandra</a></li>
+<li><a class="reference internal" href="#apache-nginx">Apache, nginx</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#development-tools">development tools</a><ul>
+<li><a class="reference internal" href="#git-github">git&amp;github</a></li>
+<li><a class="reference internal" href="#subversion">subversion</a></li>
+<li><a class="reference internal" href="#cvs">CVS</a></li>
+<li><a class="reference internal" href="#chef">chef</a></li>
+<li><a class="reference internal" href="#gor">gor</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id2">やりたい</a><ul>
+<li><a class="reference internal" href="#vagrant">vagrant</a></li>
+<li><a class="reference internal" href="#docker">docker</a></li>
 </ul>
 </li>
 </ul>
@@ -115,7 +129,7 @@
             
               <li class="hidden-sm">
 <div id="sourcelink">
-  <a href="sources/skill.txt"
+  <a href="_sources/skill.txt"
      rel="nofollow">Source</a>
 </div></li>
             
@@ -171,13 +185,20 @@
 <li>pypi にパッケージをあげられるぐらいのスキル</li>
 </ul>
 </div>
+<div class="section" id="ruby">
+<h3>Ruby<a class="headerlink" href="#ruby" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>2011 ...</li>
+<li>最低限しかやらない方針</li>
+<li>Chef , vagrant etcのツールを使うのに困らない程度に出来ればな心持ち。</li>
+</ul>
+</div>
 </div>
 <div class="section" id="midleware">
 <h2>Midleware<a class="headerlink" href="#midleware" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="mysql">
 <h3>MySQL<a class="headerlink" href="#mysql" title="Permalink to this headline">¶</a></h3>
-<blockquote>
-<div><ul class="simple">
+<ul class="simple">
 <li>主に5.1で運用</li>
 <li>マスター - スレーブの構築等の経験あり</li>
 <li>InnoDB チューニングとうの経験有り</li>
@@ -185,13 +206,72 @@
 <li>パフォーマンスの測定のために簡単なテストスクリプトの作成等</li>
 <li>RANGE パーティションニングを使ったテーブルの設計</li>
 </ul>
-</div></blockquote>
 </div>
 <div class="section" id="cassandra">
 <h3>Cassandra<a class="headerlink" href="#cassandra" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li>ちょっと触った程度。業務では未使用</li>
 </ul>
+</div>
+<div class="section" id="apache-nginx">
+<h3>Apache, nginx<a class="headerlink" href="#apache-nginx" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>Webサーバーの運用を主にやっていた</li>
+<li>モジュールの開発も必要があればこなしていた。<ul>
+<li>300行程度の小さめのモジュールを書いてた</li>
+<li>Cのポインタ処理が好きでないのでC++で書いてた</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div class="section" id="development-tools">
+<h2>development tools<a class="headerlink" href="#development-tools" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="git-github">
+<h3>git&amp;github<a class="headerlink" href="#git-github" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>submodule扱うぐらいには出来る。</li>
+<li>社内ではGithub Enterprise使ってるので普通に使える</li>
+</ul>
+</div>
+<div class="section" id="subversion">
+<h3>subversion<a class="headerlink" href="#subversion" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>2009...2011ぐらいでよく使った</li>
+<li>今でも簡単に使えそう。</li>
+</ul>
+</div>
+<div class="section" id="cvs">
+<h3>CVS<a class="headerlink" href="#cvs" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>使ったことある。まぁ、しんどいよね。</li>
+</ul>
+</div>
+<div class="section" id="chef">
+<h3>chef<a class="headerlink" href="#chef" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>あんまり使ってない。</li>
+<li>chef社のトレーニング受けたけど活かしきれてない。</li>
+</ul>
+</div>
+<div class="section" id="gor">
+<h3>gor<a class="headerlink" href="#gor" title="Permalink to this headline">¶</a></h3>
+<div class="line-block">
+<div class="line"><a class="reference external" href="https://github.com/buger/gor">buger/gor</a></div>
+</div>
+<p>シャドープロキシーサーバーのGo実装。運用的にGoodだった。</p>
+</div>
+</div>
+<div class="section" id="id2">
+<h2>やりたい<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<p>そろそろ触りたいツール</p>
+<div class="section" id="vagrant">
+<h3>vagrant<a class="headerlink" href="#vagrant" title="Permalink to this headline">¶</a></h3>
+<p>TODO</p>
+</div>
+<div class="section" id="docker">
+<h3>docker<a class="headerlink" href="#docker" title="Permalink to this headline">¶</a></h3>
+<p>TODO</p>
 </div>
 </div>
 </div>
@@ -209,7 +289,7 @@
     </p>
     <p>
         &copy; Copyright 2013, Yukihiro Okada.<br/>
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.1.3.<br/>
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.1.<br/>
     </p>
   </div>
 </footer>
