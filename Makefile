@@ -152,8 +152,8 @@ doctest:
 	@echo "Testing of doctests in the sources finished, look at the " \
 	      "results in $(BUILDDIR)/doctest/output.txt."
 push:
-	git submodule foreach git ci -m "update objects"
+	git submodule foreach git ci -m "update objects" -a
 	git submodule foreach git push origin gh-pages
 	git add build/html
-	git commit -m "update html"
+	git commit -m "update html" -a
 	git push origin master
