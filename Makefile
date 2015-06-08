@@ -151,3 +151,9 @@ doctest:
 	$(SPHINXBUILD) -b doctest $(ALLSPHINXOPTS) $(BUILDDIR)/doctest
 	@echo "Testing of doctests in the sources finished, look at the " \
 	      "results in $(BUILDDIR)/doctest/output.txt."
+push:
+	git submodule foreach git ci -m "update objects"
+	git submodule foreach git push origin gh-pages
+	git add build/html
+	git commit -m "update html"
+	git push origin master
