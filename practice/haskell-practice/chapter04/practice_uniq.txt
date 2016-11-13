@@ -1,0 +1,10 @@
+CA	Califolnia
+AL	Alabama
+AK	Alaska
+AZ	Arizona
+AR	Arkansas
+CA	Califolnia
+AL	Alabama
+AK	Alaska
+AZ	Arizona
+AR	Arkansas
