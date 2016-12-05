@@ -27,8 +27,8 @@ ChangeLog
 
 - 最新のコンパイラに合わせたコードのリポジトリ
   https://github.com/qtamaki/stdhaskell-samples.git
-  
-.... code-block:: bash
+
+.. code-block:: bash
 
     $ git clone https://github.com/qtamaki/stdhaskell-samples.git
 
@@ -39,7 +39,7 @@ ChangeLog
 - パターンマッチ周りすっかり忘れてた。
   factorial関数を書いてみた。
 
-.... code-block:: haskell
+.. code-block:: haskell
 
     factorial :: Int -> Int
     factorial 1 = 1
