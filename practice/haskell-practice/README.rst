@@ -25,8 +25,8 @@ ChangeLog
 2016/12/05
 ----------
 
-- 最新のコンパイラに合わせたコードのリポジトリ
-  https://github.com/qtamaki/stdhaskell-samples.git
+- | 最新のコンパイラに合わせたコードのリポジトリ
+  | https://github.com/qtamaki/stdhaskell-samples.git
 
 .. code-block:: bash
 
