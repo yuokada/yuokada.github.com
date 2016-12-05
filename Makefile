@@ -153,7 +153,7 @@ doctest:
 	      "results in $(BUILDDIR)/doctest/output.txt."
 push:
 	git submodule foreach git ci -m "update objects" -a
-	git submodule foreach git push origin gh-pages
+	git submodule foreach git push origin origin/gh-pages
 	git add build/html
 	git commit -m "update html" -a
-	git push origin master
+	#git push origin master
