@@ -2,3 +2,6 @@
 	path = build/html
 	url = https://github.com/yuokada/yuokada.github.com.git
 	branch = gh-pages
+[submodule "practice/haskell-practice/samples"]
+	path = practice/haskell-practice/samples
+	url = https://github.com/qtamaki/stdhaskell-samples.git
