@@ -162,6 +162,8 @@ s3互換ストレージ
 | `Minio <https://minio.io/>`_
 | `minio/minio: Minio is an Amazon S3 compatible object storage server. <https://github.com/minio/minio>`_
 
+Go言語製のs3互換ストレージ。 開発も活発なので使い勝手良さそう。
+
 another one
 ------------
 
