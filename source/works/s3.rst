@@ -31,6 +31,26 @@ s3について気になったこと
 
 see: `EMR利用時のURI Prefix "s3:// " と "s3n://" の違い - AWS / PHP / Python ちょいメモ <http://hideharaaws.hatenablog.com/entry/2013/08/29/160535>`_
 
+
+AWS上の解説
+--------------
+
+2016/12現在だと `s3://` だけ使ってれば問題ないようです。 ::
+
+    以前は、Amazon EMR は URI スキーム s3n で、S3 ネイティブファイルシステムを使用していました。
+    これは現在でも動作しますが、最適なパフォーマンス、セキュリティ、および信頼性のためには、s3 URI スキームを使用することをお勧めします。
+
+see: `Amazon EMR と互換性のあるファイルシステム - Amazon EMR <http://docs.aws.amazon.com/ja_jp/ElasticMapReduce/latest/DeveloperGuide/emr-plan-file-systems.html>`_
+
+OSS版のHadoopのオススメ
+-----------------------------
+
+`AmazonS3 - Hadoop Wiki <https://wiki.apache.org/hadoop/AmazonS3>`_
+
+    Recommended: S3A (URI scheme: s3a://) - Hadoop 2.7+
+
+s3aを推奨されていて、s3nはメンテナンスが終わっている。さらに、s3は3.0で廃止されることを書いていた。
+
 -----
 s3cmd
 -----
