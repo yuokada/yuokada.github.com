@@ -148,7 +148,7 @@ usage
         1562 of 1562   100% in    0s     4.33 kB/s  done
 
 - ファイルの削除
-  .. code-block:: bash
+    .. code-block:: bash
 
         $ s3cmd del s3://igudas/swagger.yaml
         delete: 's3://igudas/swagger.yaml'
