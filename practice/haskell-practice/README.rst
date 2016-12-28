@@ -28,9 +28,9 @@ ChangeLog
 - | 最新のコンパイラに合わせたコードのリポジトリ
   | https://github.com/qtamaki/stdhaskell-samples.git
 
-.. code-block:: bash
+  .. code-block:: bash
 
-    $ git clone https://github.com/qtamaki/stdhaskell-samples.git
+      $ git clone https://github.com/qtamaki/stdhaskell-samples.git
 
 2016/12/03
 ----------

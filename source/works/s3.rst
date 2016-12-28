@@ -125,30 +125,33 @@ configure
 usage
 -----
 
--   バケット一覧の取得
-    ::
+- バケット一覧の取得
+    .. code-block:: bash
 
         $ s3cmd ls
         2016-12-28 05:35  s3://igudas
 
-- ファイル一覧の取得 ::
+- ファイル一覧の取得
+    .. code-block:: bash
 
-      $ s3cmd ls s3://igudas
-                        DIR   s3://igudas/data/
-      2016-12-28 05:49      1562   s3://igudas/swagger.yaml
+        $ s3cmd ls s3://igudas
+                               DIR   s3://igudas/data/
+        2016-12-28 05:49      1562   s3://igudas/swagger.yaml
 
-- ファイルの取得 ::
+- ファイルの取得
+    .. code-block:: bash
 
-      $ s3cmd get s3://igudas/swagger.yaml
-      download: 's3://igudas/swagger.yaml' -> './swagger.yaml'  [1 of 1]
-      download: 's3://igudas/swagger.yaml' -> './swagger.yaml'  [1 of 1]
-      download: 's3://igudas/swagger.yaml' -> './swagger.yaml'  [1 of 1]
-      1562 of 1562   100% in    0s     4.33 kB/s  done
+        $ s3cmd get s3://igudas/swagger.yaml
+        download: 's3://igudas/swagger.yaml' -> './swagger.yaml'  [1 of 1]
+        download: 's3://igudas/swagger.yaml' -> './swagger.yaml'  [1 of 1]
+        download: 's3://igudas/swagger.yaml' -> './swagger.yaml'  [1 of 1]
+        1562 of 1562   100% in    0s     4.33 kB/s  done
 
-- ファイルの削除 ::
+- ファイルの削除
+  .. code-block:: bash
 
-      $ s3cmd del s3://igudas/swagger.yaml
-      delete: 's3://igudas/swagger.yaml'
+        $ s3cmd del s3://igudas/swagger.yaml
+        delete: 's3://igudas/swagger.yaml'
 
 オプションを渡せば再帰的にディレクトリを操作することも可能なのでこのコマンドだけで一通りのことは出来そう。
 
