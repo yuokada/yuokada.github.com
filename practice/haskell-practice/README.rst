@@ -39,11 +39,11 @@ ChangeLog
 - パターンマッチ周りすっかり忘れてた。
   factorial関数を書いてみた。
 
-.. code-block:: haskell
+  .. code-block:: haskell
 
-    factorial :: Int -> Int
-    factorial 1 = 1
-    factorial n = n * factorial  (n - 1)
+      factorial :: Int -> Int
+      factorial 1 = 1
+      factorial n = n * factorial  (n - 1)
 
 2016/11/13
 ----------

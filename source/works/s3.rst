@@ -152,6 +152,19 @@ usage
 
 オプションを渡せば再帰的にディレクトリを操作することも可能なのでこのコマンドだけで一通りのことは出来そう。
 
+---------------------
+s3互換ストレージ
+---------------------
+
+| `Minio <https://minio.io/>`_
+| `minio/minio: Minio is an Amazon S3 compatible object storage server. <https://github.com/minio/minio>`_
+
+another one
+------------
+
+- `johannesboyne/gofakes3: A simple fake AWS S3 object storage based on BoltDB (used for local test-runs against AWS S3 APIs) <https://github.com/johannesboyne/gofakes3>`_
+
+
 -----
 Links
 -----
