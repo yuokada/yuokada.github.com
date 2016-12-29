@@ -74,10 +74,14 @@ Download
     >>> elapsed time 11s
 
 
-SDK
-===
+SDKとJava
+==========
 
+- `Overview (AWS SDK for Java - 1.11.72) <http://docs.aws.amazon.com/AWSJavaSDK/latest/javadoc/index.html>`_
+- `Jarファイルメモ(Hishidama's java-archive Memo) <http://www.ne.jp/asahi/hishidama/home/tech/java/jar.html>`_
 - `【AWSの基本を学ぶ】AWS SDKを利用してみよう！【S3 コンストラクタ編】 ｜ Developers.IO <http://dev.classmethod.jp/cloud/aws/aws-sdk-s3-constructor/>`_
+- `テックノート – Amazon AWS SDK(Java)を知るためにサンプルプログラムを読もう <http://javatechnology.net/other/amazon-aws-sdk-sampl/>`_
+- `テックノート – Amazon S3 へファイルをアップロードする方法(Java編) <http://javatechnology.net/other/amazon-s3-fileupload/>`_
 
 Proxy
 =====
@@ -91,7 +95,6 @@ Proxy
 - `anomalizer/ngx_aws_auth: nginx module to proxy to authenticated AWS services <https://github.com/anomalizer/ngx_aws_auth>`_
 - `Monosnap + S3 + proxy cache のスクリーンショット環境 - 9mのパソコン日記 <https://blog.kksg.net/posts/monosnap-s3-proxy-cache>`_
 - `Amazon S3の利用料節約を考えてみる | QK <http://www.s-quad.com/wordpress/?p=1776>`_
-
 
 swagger
 -------
