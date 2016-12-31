@@ -7,6 +7,7 @@ Contents:
    :maxdepth: 2
 
    history
+   history2
    pg_history
    skill
 
