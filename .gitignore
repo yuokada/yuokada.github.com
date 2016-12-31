@@ -59,4 +59,6 @@ docs/_build/
 # PyBuilder
 target/
 
-
+#-------
+.tags
+.tags1

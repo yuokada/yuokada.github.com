@@ -22,6 +22,16 @@
 ChangeLog
 =========
 
+2016/12/05
+----------
+
+- | 最新のコンパイラに合わせたコードのリポジトリ
+  | https://github.com/qtamaki/stdhaskell-samples.git
+
+  .. code-block:: bash
+
+      $ git clone https://github.com/qtamaki/stdhaskell-samples.git
+
 2016/12/03
 ----------
 
@@ -29,11 +39,11 @@ ChangeLog
 - パターンマッチ周りすっかり忘れてた。
   factorial関数を書いてみた。
 
-  ```
-  factorial :: Int -> Int
-  factorial 1 = 1
-  factorial n = n * factorial  (n - 1)
-  ```
+  .. code-block:: haskell
+
+      factorial :: Int -> Int
+      factorial 1 = 1
+      factorial n = n * factorial  (n - 1)
 
 2016/11/13
 ----------

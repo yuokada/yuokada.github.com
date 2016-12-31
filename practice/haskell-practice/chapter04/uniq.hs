@@ -1,9 +1,10 @@
--- import System.Environment
-import Data.List
+-- $ runghc chapter04/uniq.hs < chapter04/practice_uniq.txt
+-- AK	Alaska
+-- AL	Alabama
+-- AR	Arkansas
+-- AZ	Arizona
+-- CA	Califolnia
+import           Data.List
 
 main = do cs <- getContents
-          -- ここからUniq化する
-          -- sortからのgroupでUniq
-          print $ group $ sort $ lines cs
-        --  [["AK\tAlaska","AK\tAlaska"],["AL\tAlabama","AL\tAlabama"],["AR\tArkansas","AR\tArkansas"],["AZ\tArizona","AZ\tArizona"],["CA\tCalifolnia","CA\tCalifolnia"]]
--- TODO: Group化した結果をMapでListに変換すればOK?
+          putStrLn $ unlines $ map head $ group $ sort $ lines cs
