@@ -1,0 +1,79 @@
+Chef
+======
+
+bootstrap
+---------
+
+.. code-block:: shell
+
+    % knife zero bootstrap --sudo -x yuokada -N conoha conoha                                 [16:33:57]
+    WARNING: Node "conoha" already exist. [Found 1 Node(s) in local search.] (You can skip asking with --overwrite option.)
+    Overwrite it ? (y/N) y
+    Doing old-style registration with the validation key at ...
+    Delete your validation key in order to use your user credentials instead
+
+    Connecting to conoha
+    conoha -----> Existing Chef installation detected
+    conoha Starting the first Chef Client run...
+    conoha Starting Chef Client, version 12.15.19
+    conoha resolving cookbooks for run list: []
+    conoha Synchronizing Cookbooks:
+    conoha Installing Cookbook Gems:
+    conoha Compiling Cookbooks...
+    conoha [2016-12-30T16:34:07+09:00] WARN: Node conoha has an empty run list.
+    conoha Converging 0 resources
+    conoha
+    conoha Running handlers:
+    conoha Running handlers complete
+    conoha Chef Client finished, 0/0 resources updated in 02 seconds
+
+
+recipe list
+------------
+
+ローカルにあるrecipeの一覧を取得。
+
+.. code-block:: shell
+
+    $ /usr/local/bin/knife recipe list -z
+    conoha
+    conoha::default
+
+
+converge
+--------
+
+.. code-block:: shell
+
+    $ /usr/local/bin/knife zero converge 'name:conoha' -z -a knife_zero.host -o conoha                       [17:07:14]
+    conoha Starting Chef Client, version 12.15.19
+    conoha [2016-12-30T17:07:20+09:00] WARN: Run List override has been provided.
+    conoha [2016-12-30T17:07:20+09:00] WARN: Original Run List: []
+    conoha [2016-12-30T17:07:20+09:00] WARN: Overridden Run List: [recipe[conoha]]
+    conoha resolving cookbooks for run list: ["conoha"]
+    conoha Synchronizing Cookbooks:
+    conoha   - conoha (0.1.0)
+    conoha Installing Cookbook Gems:
+    conoha Compiling Cookbooks...
+    conoha Converging 1 resources
+    conoha Recipe: conoha::default
+    conoha   * linux_user[hoge] action create
+    conoha     - create user hoge
+    conoha [2016-12-30T17:07:20+09:00] WARN: Skipping final node save because override_runlist was given
+    conoha
+    conoha Running handlers:
+    conoha Running handlers complete
+    conoha
+    conoha Deprecated features used!
+    conoha   supports { manage_home: true } on the user resource is deprecated and will be removed in Chef 13, set manage_home: true instead at 1 location:
+    conoha     - /var/chef/cache/cookbooks/conoha/recipes/default.rb:12:in `block in from_file'
+    conoha
+    conoha Chef Client finished, 1/1 resources updated in 03 seconds
+
+
+
+Link
+====
+
+- `Subcommands · Knife-Zero <http://knife-zero.github.io/30_subcommands-ja/>`_
+- `個人的Chefのtips、豆知識 - Qiita <http://qiita.com/sion_cojp/items/656f35fef354db833dbf>`_
