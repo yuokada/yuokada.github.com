@@ -29,4 +29,30 @@ limitations under the License. See accompanying LICENSE file.
         <name>hadoop.proxyuser.root.hosts</name>
         <value>*</value>
     </property>
+
+    <property>
+        <name>fs.s3a.aws.credentials.provider</name>
+        <value>org.apache.hadoop.fs.s3a.AnonymousAWSCredentialsProvider</value>
+    </property>
+
+    <property>
+        <name>fs.s3a.acl.default</name>
+        <value>public-read</value>
+        <description>Set a canned ACL for newly created and copied objects. Value may be private, public-read, public-read-write, authenticated-read, log-delivery-write, bucket-owner-read, or bucket-owner-full-control.</description>
+    </property>
+
+    <property>
+        <name>fs.s3a.impl</name>
+        <value>org.apache.hadoop.fs.s3.S3FileSystem</value>
+    </property>
+
+    <property>
+        <name>fs.s3n.impl</name>
+        <value>org.apache.hadoop.fs.s3.S3FileSystem</value>
+    </property>
+
+    <property>
+        <name>fs.s3.impl</name>
+        <value>org.apache.hadoop.fs.s3.S3FileSystem</value>
+    </property>
 </configuration>

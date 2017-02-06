@@ -54,18 +54,17 @@ limitations under the License.
         <name>datanucleus.autoStartMechanism</name>
         <value>SchemaTable</value>
     </property>
-    <!--
     <property>
         <name>hive.metastore.uris</name>
-        <value><%= @metastore_url %></value>
+        <value>thrift://localhost:9083</value>
         <description>IP address (or fully-qualified domain name) and port of the metastore host</description>
     </property>
     <property>
         <name>hive.metastore.port</name>
-        <value>9000</value>
+        <value>9083</value>
         <description>IP address (or fully-qualified domain name) and port of the metastore host</description>
     </property>
-
+    <!--
     <property>
         <name>fs.s3a.access.key</name>
         <value><%= @fs_s3a_access_key %></value>
