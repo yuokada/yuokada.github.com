@@ -67,6 +67,7 @@
       role="menu"
       aria-labelledby="dLabelGlobalToc"><ul>
 <li class="toctree-l1"><a class="reference internal" href="../history.html">職務経歴</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../history2.html">職務経歴 その2</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../pg_history.html">プログラミング履歴</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../skill.html">技術スキル</a></li>
 </ul>
@@ -219,7 +220,7 @@ Path to GPG program:
 
 When using secure HTTPS protocol all communication with Amazon S3
 servers is protected from 3rd party eavesdropping. This method is
-slower than plain HTTP, and can only be proxied with Python 2.7 or newer
+slower than plain HTTP, and can only be proxied with Python <span class="m">2</span>.7 or newer
 Use HTTPS protocol <span class="o">[</span>Yes<span class="o">]</span>: No
 
 On some networks all internet access must go through a HTTP proxy.
@@ -234,7 +235,7 @@ New settings:
   Path to GPG program: None
   Use HTTPS protocol: False
   HTTP Proxy server name:
-  HTTP Proxy server port: 0
+  HTTP Proxy server port: <span class="m">0</span>
 
 Test access with supplied credentials? <span class="o">[</span>Y/n<span class="o">]</span> Y
 Please wait, attempting to list all buckets...
@@ -255,7 +256,7 @@ Configuration saved to <span class="s1">&#39;$HOME/.s3cfg&#39;</span>
 <li><dl class="first docutils">
 <dt>バケット一覧の取得</dt>
 <dd><div class="first last highlight-bash"><div class="highlight"><pre><span></span>$ s3cmd ls
-2016-12-28 05:35  s3://igudas
+<span class="m">2016</span>-12-28 <span class="m">05</span>:35  s3://igudas
 </pre></div>
 </div>
 </dd>
@@ -265,7 +266,7 @@ Configuration saved to <span class="s1">&#39;$HOME/.s3cfg&#39;</span>
 <dt>ファイル一覧の取得</dt>
 <dd><div class="first last highlight-bash"><div class="highlight"><pre><span></span>$ s3cmd ls s3://igudas
                        DIR   s3://igudas/data/
-2016-12-28 05:49      <span class="m">1562</span>   s3://igudas/swagger.yaml
+<span class="m">2016</span>-12-28 <span class="m">05</span>:49      <span class="m">1562</span>   s3://igudas/swagger.yaml
 </pre></div>
 </div>
 </dd>
@@ -274,10 +275,10 @@ Configuration saved to <span class="s1">&#39;$HOME/.s3cfg&#39;</span>
 <li><dl class="first docutils">
 <dt>ファイルの取得</dt>
 <dd><div class="first last highlight-bash"><div class="highlight"><pre><span></span>$ s3cmd get s3://igudas/swagger.yaml
-download: <span class="s1">&#39;s3://igudas/swagger.yaml&#39;</span> -&gt; <span class="s1">&#39;./swagger.yaml&#39;</span>  <span class="o">[</span><span class="m">1</span> of 1<span class="o">]</span>
-download: <span class="s1">&#39;s3://igudas/swagger.yaml&#39;</span> -&gt; <span class="s1">&#39;./swagger.yaml&#39;</span>  <span class="o">[</span><span class="m">1</span> of 1<span class="o">]</span>
-download: <span class="s1">&#39;s3://igudas/swagger.yaml&#39;</span> -&gt; <span class="s1">&#39;./swagger.yaml&#39;</span>  <span class="o">[</span><span class="m">1</span> of 1<span class="o">]</span>
-<span class="m">1562</span> of <span class="m">1562</span>   100% in    0s     4.33 kB/s  <span class="k">done</span>
+download: <span class="s1">&#39;s3://igudas/swagger.yaml&#39;</span> -&gt; <span class="s1">&#39;./swagger.yaml&#39;</span>  <span class="o">[</span><span class="m">1</span> of <span class="m">1</span><span class="o">]</span>
+download: <span class="s1">&#39;s3://igudas/swagger.yaml&#39;</span> -&gt; <span class="s1">&#39;./swagger.yaml&#39;</span>  <span class="o">[</span><span class="m">1</span> of <span class="m">1</span><span class="o">]</span>
+download: <span class="s1">&#39;s3://igudas/swagger.yaml&#39;</span> -&gt; <span class="s1">&#39;./swagger.yaml&#39;</span>  <span class="o">[</span><span class="m">1</span> of <span class="m">1</span><span class="o">]</span>
+<span class="m">1562</span> of <span class="m">1562</span>   <span class="m">100</span>% in    0s     <span class="m">4</span>.33 kB/s  <span class="k">done</span>
 </pre></div>
 </div>
 </dd>
