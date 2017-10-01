@@ -5,4 +5,4 @@ chardet==3.0.4
 sphinx==1.6.4
 docutils==0.14
 sphinxtogithub==1.1.0
-sphinx-bootstrap-theme==0.4.12
+sphinx-bootstrap-theme==0.6.0
