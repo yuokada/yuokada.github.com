@@ -148,17 +148,17 @@
 <div class="section" id="building">
 <h3>Building<a class="headerlink" href="#building" title="Permalink to this headline">¶</a></h3>
 <p><a class="reference external" href="https://orc.apache.org/docs/building.html">Building ORC</a></p>
-<div class="highlight-shell"><div class="highlight"><pre><span></span>% <span class="nb">cd</span> java
+<div class="highlight-shell"><div class="highlight"><pre>% cd java
 % mvn package
 </pre></div>
 </div>
 </div>
 <div class="section" id="check">
 <h3>Check<a class="headerlink" href="#check" title="Permalink to this headline">¶</a></h3>
-<div class="highlight-shell"><div class="highlight"><pre><span></span><span class="c1"># To get information about an ORC file, use the orcfiledump command.</span>
+<div class="highlight-shell"><div class="highlight"><pre># To get information about an ORC file, use the orcfiledump command.
 % hive --orcfiledump &lt;path_to_file&gt;
 
-<span class="c1"># As of Hive 1.1, to display the data in the ORC file, use:</span>
+# As of Hive 1.1, to display the data in the ORC file, use:
 % hive --orcfiledump -d &lt;path_to_file&gt;
 </pre></div>
 </div>
@@ -179,7 +179,7 @@
 <ul class="simple">
 <li><a class="reference external" href="https://aws.amazon.com/jp/blogs/aws/amazon-athena-interactive-sql-queries-for-data-in-amazon-s3/">Amazon Athena – Interactive SQL Queries for Data in Amazon S3 | AWS Blog</a></li>
 </ul>
-<div class="highlight-sql"><div class="highlight"><pre><span></span><span class="k">CREATE</span> <span class="k">EXTERNAL</span> <span class="k">TABLE</span> <span class="k">IF</span> <span class="k">NOT</span> <span class="k">EXISTS</span> <span class="n">flights_parquet</span> <span class="p">(</span>
+<div class="highlight-sql"><div class="highlight"><pre><span class="k">CREATE</span> <span class="k">EXTERNAL</span> <span class="k">TABLE</span> <span class="n">IF</span> <span class="k">NOT</span> <span class="k">EXISTS</span> <span class="n">flights_parquet</span> <span class="p">(</span>
 <span class="n">yr</span> <span class="nb">INT</span><span class="p">,</span>
 <span class="n">quarter</span> <span class="nb">INT</span><span class="p">,</span>
 <span class="k">month</span> <span class="nb">INT</span><span class="p">,</span>

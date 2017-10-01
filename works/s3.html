@@ -145,7 +145,7 @@
 <h1>s3について気になったこと<a class="headerlink" href="#s3" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="s3-s3n">
 <h2><cite>s3://</cite> と <cite>s3n://</cite> について<a class="headerlink" href="#s3-s3n" title="Permalink to this headline">¶</a></h2>
-<div class="highlight-default"><div class="highlight"><pre><span></span>Hadoopは、2種類のファイルシステムをS3向けに提供
+<div class="highlight-default"><div class="highlight"><pre>Hadoopは、2種類のファイルシステムをS3向けに提供
 
 - S3 ネイティブ ファイルシステム (URI scheme: s3n)
    これは、S3上のレギュラーファイルを読み書きするファイルシステム。このファイルシステムの有利な点は、
@@ -161,7 +161,7 @@
    このファイルシステムに保存されるファイルは5GB以上が可能ですが、他のS3ツールとは相互利用が出来ません。
 </pre></div>
 </div>
-<div class="highlight-default"><div class="highlight"><pre><span></span>S3n:// の意味は　「レギュラーファイル（外の世界から読み込みができる）」 。
+<div class="highlight-default"><div class="highlight"><pre>S3n:// の意味は　「レギュラーファイル（外の世界から読み込みができる）」 。
 S3:// は、AWSストレージクラスター上のS3にマップされた、HDFSファイルシステムを参照できる。
 なので、通常ファイルを使うときには 「s3n」 を使う事になる。
 </pre></div>
@@ -170,7 +170,7 @@ S3:// は、AWSストレージクラスター上のS3にマップされた、HDF
 <div class="section" id="aws">
 <h3>AWS上の解説<a class="headerlink" href="#aws" title="Permalink to this headline">¶</a></h3>
 <p>2016/12現在だと <cite>s3://</cite> だけ使ってれば問題ないようです。</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span>以前は、Amazon EMR は URI スキーム s3n で、S3 ネイティブファイルシステムを使用していました。
+<div class="highlight-default"><div class="highlight"><pre>以前は、Amazon EMR は URI スキーム s3n で、S3 ネイティブファイルシステムを使用していました。
 これは現在でも動作しますが、最適なパフォーマンス、セキュリティ、および信頼性のためには、s3 URI スキームを使用することをお勧めします。
 </pre></div>
 </div>
@@ -191,36 +191,36 @@ S3:// は、AWSストレージクラスター上のS3にマップされた、HDF
 <div class="section" id="install">
 <h3>install<a class="headerlink" href="#install" title="Permalink to this headline">¶</a></h3>
 <p>s3cmdがpython3対応が完了していないので2.x系でインストールする。</p>
-<div class="highlight-bash"><div class="highlight"><pre><span></span>pip2.7 install s3cmd
+<div class="highlight-bash"><div class="highlight"><pre>pip2.7 install s3cmd
 </pre></div>
 </div>
 </div>
 <div class="section" id="configure">
 <h3>configure<a class="headerlink" href="#configure" title="Permalink to this headline">¶</a></h3>
-<div class="highlight-bash"><div class="highlight"><pre><span></span>$ s3cmd --configure
+<div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ </span>s3cmd --configure
 
-<span class="c1"># 実行例</span>
-$ s3cmd --configure
+<span class="c"># 実行例</span>
+<span class="nv">$ </span>s3cmd --configure
 Enter new values or accept defaults in brackets with Enter.
-Refer to user manual <span class="k">for</span> detailed description of all options.
+Refer to user manual <span class="k">for </span>detailed description of all options.
 
-Access key and Secret key are your identifiers <span class="k">for</span> Amazon S3. Leave them empty <span class="k">for</span> using the env variables.
+Access key and Secret key are your identifiers <span class="k">for </span>Amazon S3. Leave them empty <span class="k">for </span>using the env variables.
 Access Key: AAAAAAAAAAAAAA
 Secret Key: XXXXXXXXXXXXXX
 Default Region <span class="o">[</span>US<span class="o">]</span>:
 
 Encryption password is used to protect your files from reading
-by unauthorized persons <span class="k">while</span> in transfer to S3
+by unauthorized persons <span class="k">while </span>in transfer to S3
 Encryption password:
 Path to GPG program:
 
 When using secure HTTPS protocol all communication with Amazon S3
 servers is protected from 3rd party eavesdropping. This method is
-slower than plain HTTP, and can only be proxied with Python <span class="m">2</span>.7 or newer
+slower than plain HTTP, and can only be proxied with Python 2.7 or newer
 Use HTTPS protocol <span class="o">[</span>Yes<span class="o">]</span>: No
 
 On some networks all internet access must go through a HTTP proxy.
-Try setting it here <span class="k">if</span> you can<span class="se">\&#39;</span>t connect to S3 directly
+Try setting it here <span class="k">if </span>you can<span class="se">\&#39;</span>t connect to S3 directly
 HTTP Proxy server name:
 
 New settings:
@@ -231,10 +231,10 @@ New settings:
   Path to GPG program: None
   Use HTTPS protocol: False
   HTTP Proxy server name:
-  HTTP Proxy server port: <span class="m">0</span>
+  HTTP Proxy server port: 0
 
 Test access with supplied credentials? <span class="o">[</span>Y/n<span class="o">]</span> Y
-Please wait, attempting to list all buckets...
+Please <span class="nb">wait</span>, attempting to list all buckets...
 Success. Your access key and secret key worked fine :-<span class="o">)</span>
 
 Now verifying that encryption works...
@@ -251,8 +251,8 @@ Configuration saved to <span class="s1">&#39;$HOME/.s3cfg&#39;</span>
 <ul>
 <li><dl class="first docutils">
 <dt>バケット一覧の取得</dt>
-<dd><div class="first last highlight-bash"><div class="highlight"><pre><span></span>$ s3cmd ls
-<span class="m">2016</span>-12-28 <span class="m">05</span>:35  s3://igudas
+<dd><div class="first last highlight-bash"><div class="highlight"><pre><span class="nv">$ </span>s3cmd ls
+2016-12-28 05:35  s3://igudas
 </pre></div>
 </div>
 </dd>
@@ -260,9 +260,9 @@ Configuration saved to <span class="s1">&#39;$HOME/.s3cfg&#39;</span>
 </li>
 <li><dl class="first docutils">
 <dt>ファイル一覧の取得</dt>
-<dd><div class="first last highlight-bash"><div class="highlight"><pre><span></span>$ s3cmd ls s3://igudas
+<dd><div class="first last highlight-bash"><div class="highlight"><pre><span class="nv">$ </span>s3cmd ls s3://igudas
                        DIR   s3://igudas/data/
-<span class="m">2016</span>-12-28 <span class="m">05</span>:49      <span class="m">1562</span>   s3://igudas/swagger.yaml
+2016-12-28 05:49      1562   s3://igudas/swagger.yaml
 </pre></div>
 </div>
 </dd>
@@ -270,11 +270,11 @@ Configuration saved to <span class="s1">&#39;$HOME/.s3cfg&#39;</span>
 </li>
 <li><dl class="first docutils">
 <dt>ファイルの取得</dt>
-<dd><div class="first last highlight-bash"><div class="highlight"><pre><span></span>$ s3cmd get s3://igudas/swagger.yaml
-download: <span class="s1">&#39;s3://igudas/swagger.yaml&#39;</span> -&gt; <span class="s1">&#39;./swagger.yaml&#39;</span>  <span class="o">[</span><span class="m">1</span> of <span class="m">1</span><span class="o">]</span>
-download: <span class="s1">&#39;s3://igudas/swagger.yaml&#39;</span> -&gt; <span class="s1">&#39;./swagger.yaml&#39;</span>  <span class="o">[</span><span class="m">1</span> of <span class="m">1</span><span class="o">]</span>
-download: <span class="s1">&#39;s3://igudas/swagger.yaml&#39;</span> -&gt; <span class="s1">&#39;./swagger.yaml&#39;</span>  <span class="o">[</span><span class="m">1</span> of <span class="m">1</span><span class="o">]</span>
-<span class="m">1562</span> of <span class="m">1562</span>   <span class="m">100</span>% in    0s     <span class="m">4</span>.33 kB/s  <span class="k">done</span>
+<dd><div class="first last highlight-bash"><div class="highlight"><pre><span class="nv">$ </span>s3cmd get s3://igudas/swagger.yaml
+download: <span class="s1">&#39;s3://igudas/swagger.yaml&#39;</span> -&gt; <span class="s1">&#39;./swagger.yaml&#39;</span>  <span class="o">[</span>1 of 1<span class="o">]</span>
+download: <span class="s1">&#39;s3://igudas/swagger.yaml&#39;</span> -&gt; <span class="s1">&#39;./swagger.yaml&#39;</span>  <span class="o">[</span>1 of 1<span class="o">]</span>
+download: <span class="s1">&#39;s3://igudas/swagger.yaml&#39;</span> -&gt; <span class="s1">&#39;./swagger.yaml&#39;</span>  <span class="o">[</span>1 of 1<span class="o">]</span>
+1562 of 1562   100% in    0s     4.33 kB/s  <span class="k">done</span>
 </pre></div>
 </div>
 </dd>
@@ -282,7 +282,7 @@ download: <span class="s1">&#39;s3://igudas/swagger.yaml&#39;</span> -&gt; <span
 </li>
 <li><dl class="first docutils">
 <dt>ファイルの削除</dt>
-<dd><div class="first last highlight-bash"><div class="highlight"><pre><span></span>$ s3cmd del s3://igudas/swagger.yaml
+<dd><div class="first last highlight-bash"><div class="highlight"><pre><span class="nv">$ </span>s3cmd del s3://igudas/swagger.yaml
 delete: <span class="s1">&#39;s3://igudas/swagger.yaml&#39;</span>
 </pre></div>
 </div>
