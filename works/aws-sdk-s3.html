@@ -2,27 +2,19 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>AWS SDK for Java &#8212; my blog 2017.100101 documentation</title>
-    <link rel="stylesheet" href="../static/bootstrap-sphinx.css" type="text/css" />
-    <link rel="stylesheet" href="../static/pygments.css" type="text/css" />
-    <script type="text/javascript">
-      var DOCUMENTATION_OPTIONS = {
-        URL_ROOT:    '../',
-        VERSION:     '2017.100101',
-        COLLAPSE_INDEX: false,
-        FILE_SUFFIX: '.html',
-        HAS_SOURCE:  true,
-        SOURCELINK_SUFFIX: '.txt'
-      };
-    </script>
-    <script type="text/javascript" src="../static/jquery.js"></script>
-    <script type="text/javascript" src="../static/underscore.js"></script>
-    <script type="text/javascript" src="../static/doctools.js"></script>
-    <script type="text/javascript" src="../static/js/jquery-1.11.0.min.js"></script>
-    <script type="text/javascript" src="../static/js/jquery-fix.js"></script>
-    <script type="text/javascript" src="../static/bootstrap-3.3.7/js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="../static/bootstrap-sphinx.js"></script>
+    <title>AWS SDK for Java &#8212; my blog 2018.052701 documentation</title>
+    <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <script type="text/javascript" src="../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="../_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
 <meta charset='utf-8'>
@@ -30,8 +22,7 @@
 <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
 <meta name="apple-mobile-web-app-capable" content="yes">
 
-  </head>
-  <body>
+  </head><body>
 
   <div id="navbar" class="navbar navbar-default navbar-fixed-top">
     <div class="container">
@@ -44,7 +35,7 @@
         </button>
         <a class="navbar-brand" href="../index.html">
           my blog</a>
-        <span class="navbar-text navbar-version pull-left"><b>1.1.2</b></span>
+        <span class="navbar-text navbar-version pull-left"><b>2.0.0</b></span>
       </div>
 
         <div class="collapse navbar-collapse nav-collapse">
@@ -101,7 +92,7 @@
             
               <li class="hidden-sm">
 <div id="sourcelink">
-  <a href="../sources/works/aws-sdk-s3.rst.txt"
+  <a href="../_sources/works/aws-sdk-s3.rst.txt"
      rel="nofollow">Source</a>
 </div></li>
             
@@ -130,35 +121,35 @@
 <div class="section" id="download">
 <h2>Download<a class="headerlink" href="#download" title="Permalink to this headline">¶</a></h2>
 <p><a class="reference external" href="https://aws.amazon.com/jp/developers/getting-started/java/">Java</a></p>
-<div class="highlight-shell"><div class="highlight"><pre>$ git clone https://github.com/awslabs/aws-java-sample.git
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>$ git clone https://github.com/awslabs/aws-java-sample.git
 
 $ vim ~/.aws/credentials
 
 $ cat ~/.aws/credentials
-[default]
+<span class="o">[</span>default<span class="o">]</span>
 
-aws_access_key_id = YOUR_ACCESS_KEY_ID
+<span class="nv">aws_access_key_id</span> <span class="o">=</span> YOUR_ACCESS_KEY_ID
 
-aws_secret_access_key = YOUR_SECRET_ACCESS_KEY
+<span class="nv">aws_secret_access_key</span> <span class="o">=</span> YOUR_SECRET_ACCESS_KEY
 
 $ mvn clean compile exec:java
 </pre></div>
 </div>
-<div class="highlight-shell"><div class="highlight"><pre>❯ mvn  exec:java
-[INFO] Scanning for projects...
-[INFO]
-[INFO] ------------------------------------------------------------------------
-[INFO] Building aws-java-sample 1.0
-[INFO] ------------------------------------------------------------------------
-[INFO]
-[INFO] &gt;&gt;&gt; exec-maven-plugin:1.2.1:java (default-cli) &gt; validate @ aws-java-sample &gt;&gt;&gt;
-[INFO]
-[INFO] &lt;&lt;&lt; exec-maven-plugin:1.2.1:java (default-cli) &lt; validate @ aws-java-sample &lt;&lt;&lt;
-[INFO]
-[INFO] --- exec-maven-plugin:1.2.1:java (default-cli) @ aws-java-sample ---
-===========================================
-Getting Started with Amazon S3
-===========================================
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>❯ mvn  exec:java
+<span class="o">[</span>INFO<span class="o">]</span> Scanning <span class="k">for</span> projects...
+<span class="o">[</span>INFO<span class="o">]</span>
+<span class="o">[</span>INFO<span class="o">]</span> ------------------------------------------------------------------------
+<span class="o">[</span>INFO<span class="o">]</span> Building aws-java-sample <span class="m">1</span>.0
+<span class="o">[</span>INFO<span class="o">]</span> ------------------------------------------------------------------------
+<span class="o">[</span>INFO<span class="o">]</span>
+<span class="o">[</span>INFO<span class="o">]</span> &gt;&gt;&gt; exec-maven-plugin:1.2.1:java <span class="o">(</span>default-cli<span class="o">)</span> &gt; validate @ aws-java-sample &gt;&gt;&gt;
+<span class="o">[</span>INFO<span class="o">]</span>
+<span class="o">[</span>INFO<span class="o">]</span> <span class="o">&lt;&lt;&lt;</span> exec-maven-plugin:1.2.1:java <span class="o">(</span>default-cli<span class="o">)</span> &lt; validate @ aws-java-sample <span class="o">&lt;&lt;&lt;</span>
+<span class="o">[</span>INFO<span class="o">]</span>
+<span class="o">[</span>INFO<span class="o">]</span> --- exec-maven-plugin:1.2.1:java <span class="o">(</span>default-cli<span class="o">)</span> @ aws-java-sample ---
+<span class="o">===========================================</span>
+Getting Started with Amazon <span class="nv">S3</span>
+<span class="o">===========================================</span>
 
 Creating bucket my-first-s3-bucket-fa8375c2-a751-47f9-9616-014b7249cf24
 
@@ -171,26 +162,26 @@ Uploading a new object to S3 from a file
 Downloading an object
 Content-Type: text/plain
 abcdefghijklmnopqrstuvwxyz
-01234567890112345678901234
-!@#$%^&amp;*()-=[]{};&#39;:&#39;,.&lt;&gt;/?
-01234567890112345678901234
+<span class="m">01234567890112345678901234</span>
+!@#$%^<span class="p">&amp;</span>*<span class="o">()</span>-<span class="o">=[]{}</span><span class="p">;</span><span class="s1">&#39;:&#39;</span>,.&lt;&gt;/?
+<span class="m">01234567890112345678901234</span>
 abcdefghijklmnopqrstuvwxyz
 
 Listing objects
-- MyObjectKey  (size = 135)
+- MyObjectKey  <span class="o">(</span><span class="nv">size</span> <span class="o">=</span> <span class="m">135</span><span class="o">)</span>
 
 Deleting an object
 
 Deleting bucket my-first-s3-bucket-fa8375c2-a751-47f9-9616-014b7249cf24
 
-[INFO] ------------------------------------------------------------------------
-[INFO] BUILD SUCCESS
-[INFO] ------------------------------------------------------------------------
-[INFO] Total time: 9.467 s
-[INFO] Finished at: 2016-12-28T20:06:13+09:00
-[INFO] Final Memory: 13M/208M
-[INFO] ------------------------------------------------------------------------
-&gt;&gt;&gt; elapsed time 11s
+<span class="o">[</span>INFO<span class="o">]</span> ------------------------------------------------------------------------
+<span class="o">[</span>INFO<span class="o">]</span> BUILD SUCCESS
+<span class="o">[</span>INFO<span class="o">]</span> ------------------------------------------------------------------------
+<span class="o">[</span>INFO<span class="o">]</span> Total time: <span class="m">9</span>.467 s
+<span class="o">[</span>INFO<span class="o">]</span> Finished at: <span class="m">2016</span>-12-28T20:06:13+09:00
+<span class="o">[</span>INFO<span class="o">]</span> Final Memory: 13M/208M
+<span class="o">[</span>INFO<span class="o">]</span> ------------------------------------------------------------------------
+&gt;&gt;&gt; elapsed <span class="nb">time</span> 11s
 </pre></div>
 </div>
 </div>
@@ -239,8 +230,8 @@ Deleting bucket my-first-s3-bucket-fa8375c2-a751-47f9-9616-014b7249cf24
       
     </p>
     <p>
-        &copy; Copyright 2017, Yukihiro Okada.<br/>
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.6.4.<br/>
+        &copy; Copyright 2018, Yukihiro Okada.<br/>
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.7.4.<br/>
     </p>
   </div>
 </footer>

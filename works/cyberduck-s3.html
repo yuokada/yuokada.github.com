@@ -2,27 +2,19 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>Cyberduckからs3につないでみる &#8212; my blog 2017.100101 documentation</title>
-    <link rel="stylesheet" href="../static/bootstrap-sphinx.css" type="text/css" />
-    <link rel="stylesheet" href="../static/pygments.css" type="text/css" />
-    <script type="text/javascript">
-      var DOCUMENTATION_OPTIONS = {
-        URL_ROOT:    '../',
-        VERSION:     '2017.100101',
-        COLLAPSE_INDEX: false,
-        FILE_SUFFIX: '.html',
-        HAS_SOURCE:  true,
-        SOURCELINK_SUFFIX: '.txt'
-      };
-    </script>
-    <script type="text/javascript" src="../static/jquery.js"></script>
-    <script type="text/javascript" src="../static/underscore.js"></script>
-    <script type="text/javascript" src="../static/doctools.js"></script>
-    <script type="text/javascript" src="../static/js/jquery-1.11.0.min.js"></script>
-    <script type="text/javascript" src="../static/js/jquery-fix.js"></script>
-    <script type="text/javascript" src="../static/bootstrap-3.3.7/js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="../static/bootstrap-sphinx.js"></script>
+    <title>Cyberduckからs3につないでみる &#8212; my blog 2018.052701 documentation</title>
+    <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <script type="text/javascript" src="../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="../_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
 <meta charset='utf-8'>
@@ -30,8 +22,7 @@
 <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
 <meta name="apple-mobile-web-app-capable" content="yes">
 
-  </head>
-  <body>
+  </head><body>
 
   <div id="navbar" class="navbar navbar-default navbar-fixed-top">
     <div class="container">
@@ -44,7 +35,7 @@
         </button>
         <a class="navbar-brand" href="../index.html">
           my blog</a>
-        <span class="navbar-text navbar-version pull-left"><b>1.1.2</b></span>
+        <span class="navbar-text navbar-version pull-left"><b>2.0.0</b></span>
       </div>
 
         <div class="collapse navbar-collapse nav-collapse">
@@ -103,7 +94,7 @@
             
               <li class="hidden-sm">
 <div id="sourcelink">
-  <a href="../sources/works/cyberduck-s3.rst.txt"
+  <a href="../_sources/works/cyberduck-s3.rst.txt"
      rel="nofollow">Source</a>
 </div></li>
             
@@ -146,17 +137,17 @@
 <div class="section" id="building">
 <h3>Building<a class="headerlink" href="#building" title="Permalink to this headline">¶</a></h3>
 <p><a class="reference external" href="https://orc.apache.org/docs/building.html">Building ORC</a></p>
-<div class="highlight-shell"><div class="highlight"><pre>% cd java
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>% <span class="nb">cd</span> java
 % mvn package
 </pre></div>
 </div>
 </div>
 <div class="section" id="check">
 <h3>Check<a class="headerlink" href="#check" title="Permalink to this headline">¶</a></h3>
-<div class="highlight-shell"><div class="highlight"><pre># To get information about an ORC file, use the orcfiledump command.
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="c1"># To get information about an ORC file, use the orcfiledump command.</span>
 % hive --orcfiledump &lt;path_to_file&gt;
 
-# As of Hive 1.1, to display the data in the ORC file, use:
+<span class="c1"># As of Hive 1.1, to display the data in the ORC file, use:</span>
 % hive --orcfiledump -d &lt;path_to_file&gt;
 </pre></div>
 </div>
@@ -177,7 +168,7 @@
 <ul class="simple">
 <li><a class="reference external" href="https://aws.amazon.com/jp/blogs/aws/amazon-athena-interactive-sql-queries-for-data-in-amazon-s3/">Amazon Athena – Interactive SQL Queries for Data in Amazon S3 | AWS Blog</a></li>
 </ul>
-<div class="highlight-sql"><div class="highlight"><pre><span class="k">CREATE</span> <span class="k">EXTERNAL</span> <span class="k">TABLE</span> <span class="n">IF</span> <span class="k">NOT</span> <span class="k">EXISTS</span> <span class="n">flights_parquet</span> <span class="p">(</span>
+<div class="highlight-sql notranslate"><div class="highlight"><pre><span></span><span class="k">CREATE</span> <span class="k">EXTERNAL</span> <span class="k">TABLE</span> <span class="k">IF</span> <span class="k">NOT</span> <span class="k">EXISTS</span> <span class="n">flights_parquet</span> <span class="p">(</span>
 <span class="n">yr</span> <span class="nb">INT</span><span class="p">,</span>
 <span class="n">quarter</span> <span class="nb">INT</span><span class="p">,</span>
 <span class="k">month</span> <span class="nb">INT</span><span class="p">,</span>
@@ -308,8 +299,8 @@
       
     </p>
     <p>
-        &copy; Copyright 2017, Yukihiro Okada.<br/>
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.6.4.<br/>
+        &copy; Copyright 2018, Yukihiro Okada.<br/>
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.7.4.<br/>
     </p>
   </div>
 </footer>
