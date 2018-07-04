@@ -6,8 +6,7 @@ Contents:
 .. toctree::
    :maxdepth: 2
 
-   history
-   history2
+   history1
    pg_history
    skill
 
