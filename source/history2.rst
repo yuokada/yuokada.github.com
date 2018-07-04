@@ -26,7 +26,7 @@ Pull Requests
 
 2016年10月-2017年9月
 ====================
-分散クエリ処理エンジン`Presto`を開発・運用するチームに異動。
+分散クエリ処理エンジン `Presto` を開発・運用するチームに異動。
 
 `Presto | Distributed SQL Query Engine for Big Data <https://prestodb.io/>`_
 
@@ -59,7 +59,7 @@ Pull Requests
 
 `Platform as a Service` としてPrestoを提供するための技術調査を実施。
 
-- `Apache Mesos` と そのフレームワークの`Marathon`を中心に調査
+- `Apache Mesos` と そのフレームワークの `Marathon` を中心に調査
 - `Kubernetes` も少しだけ調査
 
   - PoCとなるデモ環境の開発・構築を担当
