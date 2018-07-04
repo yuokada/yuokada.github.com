@@ -24,16 +24,30 @@ Pull Requests
 - | `[WIP] Add function to to shorten and format numbers by yuokada · Pull Request #6437 · prestodb/presto <https://github.com/prestodb/presto/pull/6437>`_
   | マージされてないけど。
 
-2016年10-12月
-=============
+2016年10月-2017年9月
+====================
 
-新しいチームに異動。 相変わらずOpsな業務をやってる。
+新しいチームに異動。 運用業務を中心に
 
 `Presto | Distributed SQL Query Engine for Big Data <https://prestodb.io/>`_
 
-- prestoの環境構築
-- CentOS7上での環境構築
+- Prestoの導入調査と環境構築
+- CentOS7上での運用のためのパッケージ開発・環境構築
 
   - systemd
   - firewalld
   - rpm/fpm
+
+2017年10月-現在
+====================
+
+継続してPrestoの開発・運用を主な業務として実施している。
+開発の比率が徐々にだが上がって来ている。
+
+
+`Platform as a Service` としてPrestoを提供するための技術調査を実施。
+
+- Apache Mesos と Marathonを中心に調査
+- Kubernetesも少しだけ調査
+
+  - PoCとなるデモ環境の開発・構築を担当
