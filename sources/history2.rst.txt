@@ -34,6 +34,8 @@ Pull Requests
 - Prestoの導入調査と環境構築
 - CentOS7上での運用のためのパッケージ開発・環境構築
 
+- 利用技術
+
   - systemd
   - firewalld
   - rpm/fpm
