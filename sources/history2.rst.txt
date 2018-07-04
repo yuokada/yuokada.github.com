@@ -60,4 +60,4 @@ Pull Requests
 
 - Mesos / Marathon
 - Python3.6 / Django
-- traefik : `containous/traefik: The Cloud Native Edge Router<https://github.com/containous/traefik>`_
+- traefik : `containous/traefik: The Cloud Native Edge Router <https://github.com/containous/traefik>`_
