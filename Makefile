@@ -158,5 +158,5 @@ push:
 	# cd build/html  && git add . && git commit -a -m "update objects" \
 	# 	 && git push origin gh-pages
 	git add build/html
-	git commit -m "update html" -a
+	git commit -m "update html"
 	git push origin master
