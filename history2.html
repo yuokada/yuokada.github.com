@@ -75,11 +75,12 @@
 <li><a class="reference internal" href="#pull-requests">Pull Requests</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#id3">2016年10月-2017年9月</a></li>
-<li><a class="reference internal" href="#id4">2017年10月-現在</a><ul>
-<li><a class="reference internal" href="#id5">利用技術</a></li>
+<li><a class="reference internal" href="#id3">2016年10月-2017年9月</a><ul>
+<li><a class="reference internal" href="#id4">利用技術</a></li>
+<li><a class="reference internal" href="#id5">その他の業務</a></li>
 </ul>
 </li>
+<li><a class="reference internal" href="#id6">2017年10月-現在</a></li>
 </ul>
 </li>
 </ul>
@@ -134,9 +135,7 @@
 <div class="section" id="id2">
 <h2>2016年01-09月<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
 <p>仕事としてエンジニアっぽくない期間だった。
-ドキュメント書いたりOJTの業務したりと自分でコード書く期間では無かったように思う。
-フラストレーションが溜まりやすい環境だったけど、思うに業務と評価の関連性が薄いから
-ガンバっても評価されないというのが直接の原因だったようにきがする。</p>
+ドキュメント書いたりOJTの業務したりと自分でコード書く期間では無かったように思う。</p>
 <div class="section" id="pull-requests">
 <h3>Pull Requests<a class="headerlink" href="#pull-requests" title="Permalink to this headline">¶</a></h3>
 <p>仕事関連で出したPRがほとんど。</p>
@@ -161,39 +160,50 @@
 </div>
 <div class="section" id="id3">
 <h2>2016年10月-2017年9月<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
-<p>新しいチームに異動。 運用業務を中心に</p>
+<p>分散クエリ処理エンジン`Presto`を開発・運用するチームに異動。</p>
 <p><a class="reference external" href="https://prestodb.io/">Presto | Distributed SQL Query Engine for Big Data</a></p>
 <ul class="simple">
-<li>Prestoの導入調査と環境構築</li>
+<li>Prestoの導入と構成の調査・パフォーマンスなど検証<ul>
+<li>トラフィックが出るところでインフラを担当する部署とNW周りの調整業務を担当</li>
+</ul>
+</li>
+<li>運用のためのchef クックブックなど環境構築周りを中心に担当</li>
 <li>CentOS7上での運用のためのパッケージ開発・環境構築</li>
-<li>利用技術<ul>
+</ul>
+<div class="section" id="id4">
+<h3>利用技術<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>chef / chef server</li>
 <li>systemd</li>
 <li>firewalld</li>
 <li>rpm/fpm</li>
 </ul>
-</li>
+</div>
+<div class="section" id="id5">
+<h3>その他の業務<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>OJT: チーム開発でのプロダクト・オーナーとしてチューター的な役割を担当</li>
+<li>インターンシップ: チーム内でのインターンシップ担当としてコードレビューを主に担当</li>
 </ul>
 </div>
-<div class="section" id="id4">
-<h2>2017年10月-現在<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h2>
-<p>継続してPrestoの開発・運用を主な業務として実施している。
-開発の比率が徐々にだが上がって来ている。</p>
+</div>
+<div class="section" id="id6">
+<h2>2017年10月-現在<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h2>
+<p>継続してPrestoの開発・運用を主な業務として実施している。前期よりも開発の比率が徐々にだが上がって来ている。</p>
 <p><cite>Platform as a Service</cite> としてPrestoを提供するための技術調査を実施。</p>
 <ul class="simple">
-<li>Apache Mesos と Marathonを中心に調査</li>
-<li>Kubernetesも少しだけ調査<ul>
+<li><cite>Apache Mesos</cite> と そのフレームワークの`Marathon`を中心に調査</li>
+<li><cite>Kubernetes</cite> も少しだけ調査<ul>
 <li>PoCとなるデモ環境の開発・構築を担当</li>
+<li>社内認証基盤 <cite>Athenz</cite> を利用するためのプラグイン開発</li>
 </ul>
 </li>
 </ul>
-<div class="section" id="id5">
-<h3>利用技術<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li>Mesos / Marathon</li>
 <li>Python3.6 / Django</li>
 <li>traefik : <a class="reference external" href="https://github.com/containous/traefik">containous/traefik: The Cloud Native Edge Router</a></li>
 </ul>
-</div>
 </div>
 </div>
 
