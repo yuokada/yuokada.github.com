@@ -1,28 +1,61 @@
-===============
-職務経歴 その2
-===============
+===========
+職務経歴
+===========
 
-2016年01-09月
-=============
+2009年4月 ~ 2013年3月
+=========================
 
-仕事としてエンジニアっぽくない期間だった。
-ドキュメント書いたりOJTの業務したりと自分でコード書く期間では無かったように思う。
+- 2009年4月 入社
+- 2009年7月 コメントシステムのWebAPI開発・保守チームに配属
 
-.. フラストレーションが溜まりやすい環境だったけど、思うに業務と評価の関連性が薄いから
-.. ガンバっても評価されないというのが直接の原因だったようにきがする。
+業務内容
+--------
 
-Pull Requests
--------------
+- PHP でのWebAPI保守
+- カスタマーサポート(CS)ツールへの機能追加
 
-仕事関連で出したPRがほとんど。
+  - Role / 権限管理機能の導入
+  - データベースの冗長化構成への切り替え
 
-- `Fix the markdown syntax error. by yuokada · Pull Request #296 · prestodb/presto-admin <https://github.com/prestodb/presto-admin/pull/296>`_
+- WebAPIの設計・開発
+
+  - Python2.7/Flask製 Restful WebAPIサーバー - MySQL - Redis.
+  - MySQL スキーマ設計
+  - Redis Key設計
+
+2013年4月 ~ 2016年9月
+=========================
+
+Webビーコン、リダイレクター を運用するチームに異動。
+
+- OSの乗せ換え: FreeBSD6 -> CentOS6への移行作業
+- Webビーコンのキャパシティ管理、モニタリング周りの改善
+- リダイレクトサーバー等のバックエンドの業務
+
+  - 高負荷でのサーバーの運用とnagiosによる監視業務
+  - サーバーのキャパシティ・プランニング
+  - ユーザーの行動履歴を取るようなソリューション調査
+
+- `Golang` によって周辺ツールのパフォーマンス改善
+
+  - デプロイ時にリダイレクターが期待した動作をするかの動作確認ツールがあり
+    HTTPリクエストを投げてレスポンスを確認をしていた箇所を並列化して高速化。
+
+- `nginx`, `Appache Trafic Server(ATS)` によるSSL証明書の運用
+
+- レガシーシステムの統廃合の調整
+
+  機能が似通ったビーコンを廃止するための社内調整
+
+- ドキュメント書いたりOJTの業務したりと自分でコード書く期間では無かったように思う。
+
+Pull Request
+------------
+
 - `enable timeout when https by yuokada · Pull Request #2 · marant/goloris <https://github.com/marant/goloris/pull/2>`_
 - `Use time.Duration by yuokada · Pull Request #1 · marant/goloris <https://github.com/marant/goloris/pull/1>`_
 - `Fix ineffassign error by yuokada · Pull Request #3 · sony/sonyflake <https://github.com/sony/sonyflake/pull/3>`_
 - `Add pp parameter by yuokada · Pull Request #12 · fukata/golang-stats-api-handler <https://github.com/fukata/golang-stats-api-handler/pull/12>`_
-- | `[WIP] Add function to to shorten and format numbers by yuokada · Pull Request #6437 · prestodb/presto <https://github.com/prestodb/presto/pull/6437>`_
-  | マージされてないけど。
 
 2016年10月-2017年9月
 ====================
@@ -64,7 +97,6 @@ Pull Requests
 
   - PoCとなるデモ環境の開発・構築を担当
   - 社内認証基盤 `Athenz` を利用するためのプラグイン開発
-
 
 利用技術
 --------
