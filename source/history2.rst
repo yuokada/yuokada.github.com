@@ -34,6 +34,8 @@ Pull Requests
 - Prestoの導入調査と環境構築
 - CentOS7上での運用のためのパッケージ開発・環境構築
 
+- 利用技術
+
   - systemd
   - firewalld
   - rpm/fpm
@@ -51,3 +53,11 @@ Pull Requests
 - Kubernetesも少しだけ調査
 
   - PoCとなるデモ環境の開発・構築を担当
+
+
+利用技術
+--------
+
+- Mesos / Marathon
+- Python3.6 / Django
+- traefik : `containous/traefik: The Cloud Native Edge Router<https://github.com/containous/traefik>`_
