@@ -17,6 +17,10 @@
   - Role / 権限管理機能の導入
   - データベースの冗長化構成への切り替え
 
+- コメント削除バッチ開発
+
+  表示期間が終了したコメントをDBと検索インデックスから削除するためのバッチ開発
+
 - WebAPIの設計・開発
 
   - Python2.7/Flask製 Restful WebAPIサーバー - MySQL - Redis.
@@ -28,8 +32,17 @@
 
 Webビーコン、リダイレクター を運用するチームに異動。
 
+業務内容
+--------
+
 - OSの乗せ換え: FreeBSD6 -> CentOS6への移行作業
 - Webビーコンのキャパシティ管理、モニタリング周りの改善
+
+  - サーバーのパフォーマンス検証
+  - モニタリング情報の精査
+  - リクエストの可視化のために `Influxdb/Grafana` の導入
+
+- デプロイ作業の短縮 - 1000台超のサーバーへのデプロイ作業の簡素化
 - 高負荷でのサーバーの運用とnagiosによる監視業務
 - ユーザーの行動履歴を取るためのブラウザの新機能の調査と参考実装
 - `Golang` によって周辺ツールのパフォーマンス改善
@@ -66,6 +79,9 @@ Pull Request
 
 `Presto | Distributed SQL Query Engine for Big Data <https://prestodb.io/>`_
 
+業務内容
+--------
+
 - Prestoの導入と構成の調査・パフォーマンスなど検証
 
   - トラフィックが出るところでインフラを担当する部署とNW周りの調整業務を担当
@@ -76,6 +92,10 @@ Pull Request
 利用技術
 --------
 
+- CentOS7
+- Java8
+- Prestodb
+- Object Storage
 - chef / chef server
 - systemd
 - firewalld
