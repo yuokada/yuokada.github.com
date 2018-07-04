@@ -7,9 +7,9 @@
 
 仕事としてエンジニアっぽくない期間だった。
 ドキュメント書いたりOJTの業務したりと自分でコード書く期間では無かったように思う。
-フラストレーションが溜まりやすい環境だったけど、思うに業務と評価の関連性が薄いから
-ガンバっても評価されないというのが直接の原因だったようにきがする。
 
+.. フラストレーションが溜まりやすい環境だったけど、思うに業務と評価の関連性が薄いから
+.. ガンバっても評価されないというのが直接の原因だったようにきがする。
 
 Pull Requests
 -------------
@@ -26,33 +26,44 @@ Pull Requests
 
 2016年10月-2017年9月
 ====================
-
-新しいチームに異動。 運用業務を中心に
+分散クエリ処理エンジン`Presto`を開発・運用するチームに異動。
 
 `Presto | Distributed SQL Query Engine for Big Data <https://prestodb.io/>`_
 
-- Prestoの導入調査と環境構築
+- Prestoの導入と構成の調査・パフォーマンスなど検証
+
+  - トラフィックが出るところでインフラを担当する部署とNW周りの調整業務を担当
+
+- 運用のためのchef クックブックなど環境構築周りを中心に担当
 - CentOS7上での運用のためのパッケージ開発・環境構築
 
-- 利用技術
+利用技術
+--------
 
-  - systemd
-  - firewalld
-  - rpm/fpm
+- chef / chef server
+- systemd
+- firewalld
+- rpm/fpm
+
+
+その他の業務
+------------
+
+- OJT: チーム開発でのプロダクト・オーナーとしてチューター的な役割を担当
+- インターンシップ: チーム内でのインターンシップ担当としてコードレビューを主に担当
 
 2017年10月-現在
 ====================
 
-継続してPrestoの開発・運用を主な業務として実施している。
-開発の比率が徐々にだが上がって来ている。
-
+継続してPrestoの開発・運用を主な業務として実施している。前期よりも開発の比率が徐々にだが上がって来ている。
 
 `Platform as a Service` としてPrestoを提供するための技術調査を実施。
 
-- Apache Mesos と Marathonを中心に調査
-- Kubernetesも少しだけ調査
+- `Apache Mesos` と そのフレームワークの`Marathon`を中心に調査
+- `Kubernetes` も少しだけ調査
 
   - PoCとなるデモ環境の開発・構築を担当
+  - 社内認証基盤 `Athenz` を利用するためのプラグイン開発
 
 
 利用技術
@@ -60,4 +71,4 @@ Pull Requests
 
 - Mesos / Marathon
 - Python3.6 / Django
-- traefik : `containous/traefik: The Cloud Native Edge Router<https://github.com/containous/traefik>`_
+- traefik : `containous/traefik: The Cloud Native Edge Router <https://github.com/containous/traefik>`_
