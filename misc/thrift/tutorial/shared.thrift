@@ -22,7 +22,7 @@
  * these definitions.
  */
 
-namespace cl shared
+#namespace cl shared
 namespace cpp shared
 namespace d share // "shared" would collide with the eponymous D keyword.
 namespace dart shared
@@ -35,6 +35,7 @@ namespace netcore shared
 struct SharedStruct {
   1: i32 key
   2: string value
+  3: string fname
 }
 
 service SharedService {
