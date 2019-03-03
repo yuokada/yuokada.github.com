@@ -3,6 +3,3 @@
 	url = https://github.com/yuokada/yuokada.github.com.git
 	#url = git@github.com:yuokada/yuokada.github.com.git
 	branch = gh-pages
-[submodule "misc/aws/aws-java-sample"]
-	path = misc/aws/aws-java-sample
-	url = https://github.com/awslabs/aws-java-sample.git
