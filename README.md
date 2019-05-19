@@ -4,15 +4,13 @@ yuokada.github.com
 ## github pages
 
 
-     pip install  -r requirements.txt
+     pip3 install  -r requirements.txt
+     
+## Getting started
 
-## More
+    git clone --recurse-submodules git@github.com:yuokada/yuokada.github.com.git gh-pages
 
-捗る。
+## Plus
 
      pip install watchdog
      watchmedo shell-command --patterns="*.rst" --recursive --wait --command="make html"
-
-## results
-
-http://localhost:8000/build/html/index.html
