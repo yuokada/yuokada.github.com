@@ -372,17 +372,15 @@ websupport = ["sqlalchemy (>=0.9)", "whoosh (>=2.0)"]
 
 [[package]]
 name = "sphinx-bootstrap-theme"
-version = "0.6.5"
+version = "0.8.1"
 description = "Sphinx Bootstrap Theme."
 category = "main"
 optional = false
 python-versions = "*"
 files = [
-    {file = "sphinx-bootstrap-theme-0.6.5.tar.gz", hash = "sha256:82936109a05b84029052e7efb1756161c3b4c27ae18512a90234d50fe608cba7"},
+    {file = "sphinx-bootstrap-theme-0.8.1.tar.gz", hash = "sha256:683e3b735448dadd0149f76edecf95ff4bd9157787e9e77e0d048ca6f1d680df"},
+    {file = "sphinx_bootstrap_theme-0.8.1-py2.py3-none-any.whl", hash = "sha256:6ef36206c211846ea6cbdb45bc85645578e7c62d0a883361181708f8b6ea743b"},
 ]
-
-[package.dependencies]
-setuptools = "*"
 
 [[package]]
 name = "sphinxcontrib-serializinghtml"
@@ -420,6 +418,22 @@ lint = ["flake8"]
 test = ["Sphinx", "pytest", "sqlalchemy", "whoosh"]
 
 [[package]]
+name = "sphinxtogithub"
+version = "1.1.0"
+description = "Script for preparing the html output of the Sphinx documentation system for"
+category = "main"
+optional = false
+python-versions = "*"
+files = []
+develop = false
+
+[package.source]
+type = "git"
+url = "https://github.com/proycon/sphinx-to-github.git"
+reference = "9b61be70ccfbec99724544c3e94ed1c43fb5295c"
+resolved_reference = "9b61be70ccfbec99724544c3e94ed1c43fb5295c"
+
+[[package]]
 name = "urllib3"
 version = "1.26.15"
 description = "HTTP library with thread-safe connection pooling, file post, and more."
@@ -439,4 +453,4 @@ socks = ["PySocks (>=1.5.6,!=1.5.7,<2.0)"]
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.9"
-content-hash = "0e6c3071881d00ea75e2bd20c9cbbfd07b2212df0d77689507c99350281add50"
+content-hash = "4f1df712aaf31256079a1479021d33f93084a56ec1365e55e324e181331c66d8"

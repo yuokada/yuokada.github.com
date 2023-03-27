@@ -12,8 +12,8 @@ python = "^3.9"
 certifi = "^2022.12.7"
 markupsafe = "1.1.1"
 sphinx = "1.8.6"
-sphinx-bootstrap-theme = "0.6.5"
-
+sphinx-bootstrap-theme = "^0.8.1"
+sphinxtogithub = {git = "https://github.com/proycon/sphinx-to-github.git", rev = "9b61be70ccfbec99724544c3e94ed1c43fb5295c"}
 
 [build-system]
 requires = ["poetry-core"]
