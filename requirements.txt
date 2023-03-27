@@ -1,4 +1,4 @@
- Jinja2==2.10
+ Jinja2==3.1.2
  certifi==2017.7.27.1
  sphinx==1.7.4
  sphinx-bootstrap-theme==0.6.5
