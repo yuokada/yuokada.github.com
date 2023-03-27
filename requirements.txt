@@ -1,8 +1,0 @@
-#Jinja2==2.10
-# certifi==2017.7.27.1
-certifi
-markupsafe==1.1.1
-sphinx==1.8.6
-sphinx-bootstrap-theme==0.8.1
-# sphinxtogithub==1.1.0
--e git+https://github.com/proycon/sphinx-to-github.git@9b61be70ccfbec99724544c3e94ed1c43fb5295c#egg=sphinxtogithub
