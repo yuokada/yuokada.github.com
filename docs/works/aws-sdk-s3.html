@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>AWS SDK for Java &#8212; my blog 2018.070401 documentation</title>
+    <link rel="stylesheet" href="../static/bootstrap-sphinx.css" type="text/css" />
+    <link rel="stylesheet" href="../static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../static/documentation_options.js"></script>
+    <script type="text/javascript" src="../static/jquery.js"></script>
+    <script type="text/javascript" src="../static/underscore.js"></script>
+    <script type="text/javascript" src="../static/doctools.js"></script>
+    <script type="text/javascript" src="../static/language_data.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<script type="text/javascript" src="../static/js/jquery-1.12.4.min.js"></script>
+<script type="text/javascript" src="../static/js/jquery-fix.js"></script>
+<script type="text/javascript" src="../static/bootstrap-3.4.1/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="../static/bootstrap-sphinx.js"></script>
+
+  </head><body>
+
+  <div id="navbar" class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="../index.html">
+          my blog</a>
+        <span class="navbar-text navbar-version pull-left"><b>2.0.0</b></span>
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a role="button"
+     id="dLabelGlobalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="../index.html">Site <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+      role="menu"
+      aria-labelledby="dLabelGlobalToc"><ul>
+<li class="toctree-l1"><a class="reference internal" href="../history1.html">職務経歴</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pg_history.html">プログラミング履歴</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../skill.html">技術スキル</a></li>
+</ul>
+</ul>
+</li>
+              
+                <li class="dropdown">
+  <a role="button"
+     id="dLabelLocalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="#">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"
+      role="menu"
+      aria-labelledby="dLabelLocalToc"><ul>
+<li><a class="reference internal" href="#">AWS SDK for Java</a><ul>
+<li><a class="reference internal" href="#download">Download</a></li>
+<li><a class="reference internal" href="#sdkjava">SDKとJava</a></li>
+<li><a class="reference internal" href="#proxy">Proxy</a><ul>
+<li><a class="reference internal" href="#swagger">swagger</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+            
+            
+              
+                
+              
+            
+            
+            
+            
+              <li class="hidden-sm">
+<div id="sourcelink">
+  <a href="../sources/works/aws-sdk-s3.rst.txt"
+     rel="nofollow">Source</a>
+</div></li>
+            
+          </ul>
+
+          
+            
+<form class="navbar-form navbar-right" action="../search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+    <div class="body col-md-12 content" role="main">
+      
+  <div class="section" id="aws-sdk-for-java">
+<h1>AWS SDK for Java<a class="headerlink" href="#aws-sdk-for-java" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="download">
+<h2>Download<a class="headerlink" href="#download" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference external" href="https://aws.amazon.com/jp/developers/getting-started/java/">Java</a></p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/awslabs/aws-java-sample.git
+
+$<span class="w"> </span>vim<span class="w"> </span>~/.aws/credentials
+
+$<span class="w"> </span>cat<span class="w"> </span>~/.aws/credentials
+<span class="o">[</span>default<span class="o">]</span>
+
+<span class="nv">aws_access_key_id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>YOUR_ACCESS_KEY_ID
+
+<span class="nv">aws_secret_access_key</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>YOUR_SECRET_ACCESS_KEY
+
+$<span class="w"> </span>mvn<span class="w"> </span>clean<span class="w"> </span>compile<span class="w"> </span>exec:java
+</pre></div>
+</div>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>❯<span class="w"> </span>mvn<span class="w">  </span>exec:java
+<span class="o">[</span>INFO<span class="o">]</span><span class="w"> </span>Scanning<span class="w"> </span><span class="k">for</span><span class="w"> </span>projects...
+<span class="o">[</span>INFO<span class="o">]</span>
+<span class="o">[</span>INFO<span class="o">]</span><span class="w"> </span>------------------------------------------------------------------------
+<span class="o">[</span>INFO<span class="o">]</span><span class="w"> </span>Building<span class="w"> </span>aws-java-sample<span class="w"> </span><span class="m">1</span>.0
+<span class="o">[</span>INFO<span class="o">]</span><span class="w"> </span>------------------------------------------------------------------------
+<span class="o">[</span>INFO<span class="o">]</span>
+<span class="o">[</span>INFO<span class="o">]</span><span class="w"> </span>&gt;&gt;&gt;<span class="w"> </span>exec-maven-plugin:1.2.1:java<span class="w"> </span><span class="o">(</span>default-cli<span class="o">)</span><span class="w"> </span>&gt;<span class="w"> </span>validate<span class="w"> </span>@<span class="w"> </span>aws-java-sample<span class="w"> </span>&gt;&gt;&gt;
+<span class="o">[</span>INFO<span class="o">]</span>
+<span class="o">[</span>INFO<span class="o">]</span><span class="w"> </span><span class="o">&lt;&lt;&lt;</span><span class="w"> </span>exec-maven-plugin:1.2.1:java<span class="w"> </span><span class="o">(</span>default-cli<span class="o">)</span><span class="w"> </span>&lt;<span class="w"> </span>validate<span class="w"> </span>@<span class="w"> </span>aws-java-sample<span class="w"> </span><span class="o">&lt;&lt;&lt;</span>
+<span class="o">[</span>INFO<span class="o">]</span>
+<span class="o">[</span>INFO<span class="o">]</span><span class="w"> </span>---<span class="w"> </span>exec-maven-plugin:1.2.1:java<span class="w"> </span><span class="o">(</span>default-cli<span class="o">)</span><span class="w"> </span>@<span class="w"> </span>aws-java-sample<span class="w"> </span>---
+<span class="o">===========================================</span>
+Getting<span class="w"> </span>Started<span class="w"> </span>with<span class="w"> </span>Amazon<span class="w"> </span><span class="nv">S3</span>
+<span class="o">===========================================</span>
+
+Creating<span class="w"> </span>bucket<span class="w"> </span>my-first-s3-bucket-fa8375c2-a751-47f9-9616-014b7249cf24
+
+Listing<span class="w"> </span>buckets
+-<span class="w"> </span>igudas
+-<span class="w"> </span>my-first-s3-bucket-fa8375c2-a751-47f9-9616-014b7249cf24
+
+Uploading<span class="w"> </span>a<span class="w"> </span>new<span class="w"> </span>object<span class="w"> </span>to<span class="w"> </span>S3<span class="w"> </span>from<span class="w"> </span>a<span class="w"> </span>file
+
+Downloading<span class="w"> </span>an<span class="w"> </span>object
+Content-Type:<span class="w"> </span>text/plain
+abcdefghijklmnopqrstuvwxyz
+<span class="m">01234567890112345678901234</span>
+!@#$%^<span class="p">&amp;</span>*<span class="o">()</span>-<span class="o">=[]{}</span><span class="p">;</span><span class="s1">&#39;:&#39;</span>,.&lt;&gt;/?
+<span class="m">01234567890112345678901234</span>
+abcdefghijklmnopqrstuvwxyz
+
+Listing<span class="w"> </span>objects
+-<span class="w"> </span>MyObjectKey<span class="w">  </span><span class="o">(</span><span class="nv">size</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">135</span><span class="o">)</span>
+
+Deleting<span class="w"> </span>an<span class="w"> </span>object
+
+Deleting<span class="w"> </span>bucket<span class="w"> </span>my-first-s3-bucket-fa8375c2-a751-47f9-9616-014b7249cf24
+
+<span class="o">[</span>INFO<span class="o">]</span><span class="w"> </span>------------------------------------------------------------------------
+<span class="o">[</span>INFO<span class="o">]</span><span class="w"> </span>BUILD<span class="w"> </span>SUCCESS
+<span class="o">[</span>INFO<span class="o">]</span><span class="w"> </span>------------------------------------------------------------------------
+<span class="o">[</span>INFO<span class="o">]</span><span class="w"> </span>Total<span class="w"> </span>time:<span class="w"> </span><span class="m">9</span>.467<span class="w"> </span>s
+<span class="o">[</span>INFO<span class="o">]</span><span class="w"> </span>Finished<span class="w"> </span>at:<span class="w"> </span><span class="m">2016</span>-12-28T20:06:13+09:00
+<span class="o">[</span>INFO<span class="o">]</span><span class="w"> </span>Final<span class="w"> </span>Memory:<span class="w"> </span>13M/208M
+<span class="o">[</span>INFO<span class="o">]</span><span class="w"> </span>------------------------------------------------------------------------
+&gt;&gt;&gt;<span class="w"> </span>elapsed<span class="w"> </span><span class="nb">time</span><span class="w"> </span>11s
+</pre></div>
+</div>
+</div>
+<div class="section" id="sdkjava">
+<h2>SDKとJava<a class="headerlink" href="#sdkjava" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><a class="reference external" href="http://docs.aws.amazon.com/AWSJavaSDK/latest/javadoc/index.html">Overview (AWS SDK for Java - 1.11.72)</a></li>
+<li><a class="reference external" href="http://www.ne.jp/asahi/hishidama/home/tech/java/jar.html">Jarファイルメモ(Hishidama’s java-archive Memo)</a></li>
+<li><a class="reference external" href="http://dev.classmethod.jp/cloud/aws/aws-sdk-s3-constructor/">【AWSの基本を学ぶ】AWS SDKを利用してみよう！【S3 コンストラクタ編】 ｜ Developers.IO</a></li>
+<li><a class="reference external" href="http://javatechnology.net/other/amazon-aws-sdk-sampl/">テックノート – Amazon AWS SDK(Java)を知るためにサンプルプログラムを読もう</a></li>
+<li><a class="reference external" href="http://javatechnology.net/other/amazon-s3-fileupload/">テックノート – Amazon S3 へファイルをアップロードする方法(Java編)</a></li>
+</ul>
+</div>
+<div class="section" id="proxy">
+<h2>Proxy<a class="headerlink" href="#proxy" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><a class="reference external" href="https://github.com/rhelmer/caching-s3-proxy">rhelmer/caching-s3-proxy: provides an unauthenticated plain HTTP frontend for public and private S3 buckets, and caches on the filesystem using LRU</a></li>
+<li><a class="reference external" href="https://github.com/azavea/docker-s3-proxy-cache">azavea/docker-s3-proxy-cache: A proof of concept HTTP caching proxy for requests against Amazon S3.</a>
+これ有力そう。</li>
+<li><a class="reference external" href="https://gist.github.com/mikhailov/9639593">Nginx S3/Unicorn Proxy with backend keep alive</a></li>
+<li><a class="reference external" href="http://fungoing.blogspot.jp/2010/12/amazon-s3vpsnginx.html">Fungoing Labs: Amazon S3のファイルを国内VPS（nginx）にキャッシュして配布</a></li>
+<li><a class="reference external" href="https://github.com/coopernurse/nginx-s3-proxy">coopernurse/nginx-s3-proxy: nginx compiled with aws-auth support, suitable for S3 reverse proxy usage</a></li>
+<li><a class="reference external" href="https://github.com/anomalizer/ngx_aws_auth">anomalizer/ngx_aws_auth: nginx module to proxy to authenticated AWS services</a></li>
+<li><a class="reference external" href="https://blog.kksg.net/posts/monosnap-s3-proxy-cache">Monosnap + S3 + proxy cache のスクリーンショット環境 - 9mのパソコン日記</a></li>
+<li><a class="reference external" href="http://www.s-quad.com/wordpress/?p=1776">Amazon S3の利用料節約を考えてみる | QK</a></li>
+</ul>
+<div class="section" id="swagger">
+<h3>swagger<a class="headerlink" href="#swagger" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><a class="reference external" href="http://thewowza.guru/how-to-using-nginx-caching-proxy-with-s3/">How to using NGINX caching proxy with S3 « The Wowza Guru</a></li>
+<li><a class="reference external" href="http://docs.aws.amazon.com/ja_jp/apigateway/latest/developerguide/api-as-s3-proxy-export-swagger-with-extensions.html">Amazon S3 プロキシとしてのサンプル API の Swagger 定義 - Amazon API Gateway</a></li>
+</ul>
+</div>
+</div>
+</div>
+
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2018, Yukihiro Okada.<br/>
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.8.6.<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>
