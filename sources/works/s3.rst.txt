@@ -1,0 +1,190 @@
+==============================
+s3について気になったこと
+==============================
+
+------------------------------
+`s3://` と `s3n://` について
+------------------------------
+
+::
+
+    Hadoopは、2種類のファイルシステムをS3向けに提供
+
+    - S3 ネイティブ ファイルシステム (URI scheme: s3n)
+       これは、S3上のレギュラーファイルを読み書きするファイルシステム。このファイルシステムの有利な点は、
+       S3上の他のツールで記述されたファイルにアクセスが出来ます。逆に言えば、他のツールは、
+       Hadoopを使って書かれたファイルにアクセスできます。
+       不利な点は、S3による5GBのファイルサイズの限界があることです。
+       この理由の為、HDFSの置き換えとしては適切ではありません。
+    - S3 ブロック ファイルシステム (URI scheme: s3)
+       S3によるブロック ベースのファイルシステム。ファイルはブロックとして保存され、
+       HDFSにあるのと同じようになります。・一部訳なし・。このファイルシステムは、対象バケットを
+       このファイルシステムとしてのみ使う事を必要とします - 既存のファイルを含むバケットを使ったり、
+       他のファイルを対象バケットに書き込むことは出来ません。
+       このファイルシステムに保存されるファイルは5GB以上が可能ですが、他のS3ツールとは相互利用が出来ません。
+
+::
+
+    S3n:// の意味は　「レギュラーファイル（外の世界から読み込みができる）」 。
+    S3:// は、AWSストレージクラスター上のS3にマップされた、HDFSファイルシステムを参照できる。
+    なので、通常ファイルを使うときには 「s3n」 を使う事になる。
+
+see: `EMR利用時のURI Prefix "s3:// " と "s3n://" の違い - AWS / PHP / Python ちょいメモ <http://hideharaaws.hatenablog.com/entry/2013/08/29/160535>`_
+
+
+AWS上の解説
+--------------
+
+2016/12現在だと `s3://` だけ使ってれば問題ないようです。 ::
+
+    以前は、Amazon EMR は URI スキーム s3n で、S3 ネイティブファイルシステムを使用していました。
+    これは現在でも動作しますが、最適なパフォーマンス、セキュリティ、および信頼性のためには、s3 URI スキームを使用することをお勧めします。
+
+see: `Amazon EMR と互換性のあるファイルシステム - Amazon EMR <http://docs.aws.amazon.com/ja_jp/ElasticMapReduce/latest/DeveloperGuide/emr-plan-file-systems.html>`_
+
+OSS版のHadoopのオススメ
+-----------------------------
+
+`AmazonS3 - Hadoop Wiki <https://wiki.apache.org/hadoop/AmazonS3>`_
+
+    Recommended: S3A (URI scheme: s3a://) - Hadoop 2.7+
+
+s3aを推奨されていて、s3nはメンテナンスが終わっている。さらに、s3は3.0で廃止されることを書いていた。
+
+-----
+s3cmd
+-----
+
+`s3tools/s3cmd: Official s3cmd repo -- Command line tool for managing Amazon S3 and CloudFront services <https://github.com/s3tools/s3cmd>`_
+
+python製のs3を操作するためのコマンドラインツール。
+
+install
+-------
+
+s3cmdがpython3対応が完了していないので2.x系でインストールする。
+
+.. code-block:: bash
+
+  pip2.7 install s3cmd
+
+configure
+---------
+
+.. code-block:: bash
+
+    $ s3cmd --configure
+
+    # 実行例
+    $ s3cmd --configure
+    Enter new values or accept defaults in brackets with Enter.
+    Refer to user manual for detailed description of all options.
+
+    Access key and Secret key are your identifiers for Amazon S3. Leave them empty for using the env variables.
+    Access Key: AAAAAAAAAAAAAA
+    Secret Key: XXXXXXXXXXXXXX
+    Default Region [US]:
+
+    Encryption password is used to protect your files from reading
+    by unauthorized persons while in transfer to S3
+    Encryption password:
+    Path to GPG program:
+
+    When using secure HTTPS protocol all communication with Amazon S3
+    servers is protected from 3rd party eavesdropping. This method is
+    slower than plain HTTP, and can only be proxied with Python 2.7 or newer
+    Use HTTPS protocol [Yes]: No
+
+    On some networks all internet access must go through a HTTP proxy.
+    Try setting it here if you can\'t connect to S3 directly
+    HTTP Proxy server name:
+
+    New settings:
+      Access Key: AAAAAAAAAAAAAA
+      Secret Key: XXXXXXXXXXXXXX
+      Default Region: US
+      Encryption password:
+      Path to GPG program: None
+      Use HTTPS protocol: False
+      HTTP Proxy server name:
+      HTTP Proxy server port: 0
+
+    Test access with supplied credentials? [Y/n] Y
+    Please wait, attempting to list all buckets...
+    Success. Your access key and secret key worked fine :-)
+
+    Now verifying that encryption works...
+    Not configured. Never mind.
+
+    Save settings? [y/N] y
+    Configuration saved to '$HOME/.s3cfg'
+
+
+今回はアップロードしないのでこれでOKそう。
+
+usage
+-----
+
+- バケット一覧の取得
+    .. code-block:: bash
+
+        $ s3cmd ls
+        2016-12-28 05:35  s3://igudas
+
+- ファイル一覧の取得
+    .. code-block:: bash
+
+        $ s3cmd ls s3://igudas
+                               DIR   s3://igudas/data/
+        2016-12-28 05:49      1562   s3://igudas/swagger.yaml
+
+- ファイルの取得
+    .. code-block:: bash
+
+        $ s3cmd get s3://igudas/swagger.yaml
+        download: 's3://igudas/swagger.yaml' -> './swagger.yaml'  [1 of 1]
+        download: 's3://igudas/swagger.yaml' -> './swagger.yaml'  [1 of 1]
+        download: 's3://igudas/swagger.yaml' -> './swagger.yaml'  [1 of 1]
+        1562 of 1562   100% in    0s     4.33 kB/s  done
+
+- ファイルの削除
+    .. code-block:: bash
+
+        $ s3cmd del s3://igudas/swagger.yaml
+        delete: 's3://igudas/swagger.yaml'
+
+オプションを渡せば再帰的にディレクトリを操作することも可能なのでこのコマンドだけで一通りのことは出来そう。
+
+---------------------
+s3互換ストレージ
+---------------------
+
+| `Minio <https://minio.io/>`_
+| `minio/minio: Minio is an Amazon S3 compatible object storage server. <https://github.com/minio/minio>`_
+
+Go言語製のs3互換ストレージ。 開発も活発なので使い勝手良さそう。
+
+another one
+------------
+
+- `johannesboyne/gofakes3: A simple fake AWS S3 object storage based on BoltDB (used for local test-runs against AWS S3 APIs) <https://github.com/johannesboyne/gofakes3>`_
+
+
+-----
+Links
+-----
+
+- `Amazon S3 とは何ですか？ - Amazon Simple Storage Service <http://docs.aws.amazon.com/ja_jp/AmazonS3/latest/dev/Welcome.html>`_
+- `リクエストの実行 - Amazon Simple Storage Service <http://docs.aws.amazon.com/ja_jp/AmazonS3/latest/dev/MakingRequests.html>`_
+
+s3cmd
+-----
+
+- `s3cmdのコマンド一覧 | オブジェクトストレージ <https://www.faq.idcf.jp/app/answers/detail/a_id/360/~/s3cmd%E3%81%AE%E3%82%B3%E3%83%9E%E3%83%B3%E3%83%89%E4%B8%80%E8%A6%A7>`_
+- `Amazon S3 編。S3 を s3cmd で操作する方法をご説明 | 使い方・ナレコムAWSクラウド | ナレコムAWSレシピ <http://recipe.kc-cloud.jp/archives/1059>`_
+- `s3cmdを使ってS3にアクセスする - スコトプリゴニエフスク通信 <http://perezvon.hatenablog.com/entry/20101216/1292518865>`_
+
+slides
+------
+
+- `Amazon S3を中心とするデータ分析のベストプラクティス <http://www.slideshare.net/AmazonWebServicesJapan/amazon-s3-66753750>`_

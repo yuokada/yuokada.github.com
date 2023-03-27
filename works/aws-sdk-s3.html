@@ -7,20 +7,21 @@
     <title>AWS SDK for Java &#8212; my blog 2018.070401 documentation</title>
     <link rel="stylesheet" href="../static/bootstrap-sphinx.css" type="text/css" />
     <link rel="stylesheet" href="../static/pygments.css" type="text/css" />
-    <script type="text/javascript" src="../static/documentation_options.js"></script>
+    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../static/documentation_options.js"></script>
     <script type="text/javascript" src="../static/jquery.js"></script>
     <script type="text/javascript" src="../static/underscore.js"></script>
     <script type="text/javascript" src="../static/doctools.js"></script>
-    <script type="text/javascript" src="../static/js/jquery-1.11.0.min.js"></script>
-    <script type="text/javascript" src="../static/js/jquery-fix.js"></script>
-    <script type="text/javascript" src="../static/bootstrap-3.3.7/js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="../static/bootstrap-sphinx.js"></script>
+    <script type="text/javascript" src="../static/language_data.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
 <meta charset='utf-8'>
 <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
 <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
 <meta name="apple-mobile-web-app-capable" content="yes">
+<script type="text/javascript" src="../static/js/jquery-1.12.4.min.js"></script>
+<script type="text/javascript" src="../static/js/jquery-fix.js"></script>
+<script type="text/javascript" src="../static/bootstrap-3.4.1/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="../static/bootstrap-sphinx.js"></script>
 
   </head><body>
 
@@ -51,8 +52,7 @@
   <ul class="dropdown-menu globaltoc"
       role="menu"
       aria-labelledby="dLabelGlobalToc"><ul>
-<li class="toctree-l1"><a class="reference internal" href="../history.html">職務経歴</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../history2.html">職務経歴 その2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../history1.html">職務経歴</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../pg_history.html">プログラミング履歴</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../skill.html">技術スキル</a></li>
 </ul>
@@ -114,74 +114,74 @@
 
 <div class="container">
   <div class="row">
-    <div class="col-md-12 content">
+    <div class="body col-md-12 content" role="main">
       
   <div class="section" id="aws-sdk-for-java">
 <h1>AWS SDK for Java<a class="headerlink" href="#aws-sdk-for-java" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="download">
 <h2>Download<a class="headerlink" href="#download" title="Permalink to this headline">¶</a></h2>
 <p><a class="reference external" href="https://aws.amazon.com/jp/developers/getting-started/java/">Java</a></p>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>$ git clone https://github.com/awslabs/aws-java-sample.git
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/awslabs/aws-java-sample.git
 
-$ vim ~/.aws/credentials
+$<span class="w"> </span>vim<span class="w"> </span>~/.aws/credentials
 
-$ cat ~/.aws/credentials
+$<span class="w"> </span>cat<span class="w"> </span>~/.aws/credentials
 <span class="o">[</span>default<span class="o">]</span>
 
-<span class="nv">aws_access_key_id</span> <span class="o">=</span> YOUR_ACCESS_KEY_ID
+<span class="nv">aws_access_key_id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>YOUR_ACCESS_KEY_ID
 
-<span class="nv">aws_secret_access_key</span> <span class="o">=</span> YOUR_SECRET_ACCESS_KEY
+<span class="nv">aws_secret_access_key</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>YOUR_SECRET_ACCESS_KEY
 
-$ mvn clean compile exec:java
+$<span class="w"> </span>mvn<span class="w"> </span>clean<span class="w"> </span>compile<span class="w"> </span>exec:java
 </pre></div>
 </div>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>❯ mvn  exec:java
-<span class="o">[</span>INFO<span class="o">]</span> Scanning <span class="k">for</span> projects...
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>❯<span class="w"> </span>mvn<span class="w">  </span>exec:java
+<span class="o">[</span>INFO<span class="o">]</span><span class="w"> </span>Scanning<span class="w"> </span><span class="k">for</span><span class="w"> </span>projects...
 <span class="o">[</span>INFO<span class="o">]</span>
-<span class="o">[</span>INFO<span class="o">]</span> ------------------------------------------------------------------------
-<span class="o">[</span>INFO<span class="o">]</span> Building aws-java-sample <span class="m">1</span>.0
-<span class="o">[</span>INFO<span class="o">]</span> ------------------------------------------------------------------------
+<span class="o">[</span>INFO<span class="o">]</span><span class="w"> </span>------------------------------------------------------------------------
+<span class="o">[</span>INFO<span class="o">]</span><span class="w"> </span>Building<span class="w"> </span>aws-java-sample<span class="w"> </span><span class="m">1</span>.0
+<span class="o">[</span>INFO<span class="o">]</span><span class="w"> </span>------------------------------------------------------------------------
 <span class="o">[</span>INFO<span class="o">]</span>
-<span class="o">[</span>INFO<span class="o">]</span> &gt;&gt;&gt; exec-maven-plugin:1.2.1:java <span class="o">(</span>default-cli<span class="o">)</span> &gt; validate @ aws-java-sample &gt;&gt;&gt;
+<span class="o">[</span>INFO<span class="o">]</span><span class="w"> </span>&gt;&gt;&gt;<span class="w"> </span>exec-maven-plugin:1.2.1:java<span class="w"> </span><span class="o">(</span>default-cli<span class="o">)</span><span class="w"> </span>&gt;<span class="w"> </span>validate<span class="w"> </span>@<span class="w"> </span>aws-java-sample<span class="w"> </span>&gt;&gt;&gt;
 <span class="o">[</span>INFO<span class="o">]</span>
-<span class="o">[</span>INFO<span class="o">]</span> <span class="o">&lt;&lt;&lt;</span> exec-maven-plugin:1.2.1:java <span class="o">(</span>default-cli<span class="o">)</span> &lt; validate @ aws-java-sample <span class="o">&lt;&lt;&lt;</span>
+<span class="o">[</span>INFO<span class="o">]</span><span class="w"> </span><span class="o">&lt;&lt;&lt;</span><span class="w"> </span>exec-maven-plugin:1.2.1:java<span class="w"> </span><span class="o">(</span>default-cli<span class="o">)</span><span class="w"> </span>&lt;<span class="w"> </span>validate<span class="w"> </span>@<span class="w"> </span>aws-java-sample<span class="w"> </span><span class="o">&lt;&lt;&lt;</span>
 <span class="o">[</span>INFO<span class="o">]</span>
-<span class="o">[</span>INFO<span class="o">]</span> --- exec-maven-plugin:1.2.1:java <span class="o">(</span>default-cli<span class="o">)</span> @ aws-java-sample ---
+<span class="o">[</span>INFO<span class="o">]</span><span class="w"> </span>---<span class="w"> </span>exec-maven-plugin:1.2.1:java<span class="w"> </span><span class="o">(</span>default-cli<span class="o">)</span><span class="w"> </span>@<span class="w"> </span>aws-java-sample<span class="w"> </span>---
 <span class="o">===========================================</span>
-Getting Started with Amazon <span class="nv">S3</span>
+Getting<span class="w"> </span>Started<span class="w"> </span>with<span class="w"> </span>Amazon<span class="w"> </span><span class="nv">S3</span>
 <span class="o">===========================================</span>
 
-Creating bucket my-first-s3-bucket-fa8375c2-a751-47f9-9616-014b7249cf24
+Creating<span class="w"> </span>bucket<span class="w"> </span>my-first-s3-bucket-fa8375c2-a751-47f9-9616-014b7249cf24
 
-Listing buckets
-- igudas
-- my-first-s3-bucket-fa8375c2-a751-47f9-9616-014b7249cf24
+Listing<span class="w"> </span>buckets
+-<span class="w"> </span>igudas
+-<span class="w"> </span>my-first-s3-bucket-fa8375c2-a751-47f9-9616-014b7249cf24
 
-Uploading a new object to S3 from a file
+Uploading<span class="w"> </span>a<span class="w"> </span>new<span class="w"> </span>object<span class="w"> </span>to<span class="w"> </span>S3<span class="w"> </span>from<span class="w"> </span>a<span class="w"> </span>file
 
-Downloading an object
-Content-Type: text/plain
+Downloading<span class="w"> </span>an<span class="w"> </span>object
+Content-Type:<span class="w"> </span>text/plain
 abcdefghijklmnopqrstuvwxyz
 <span class="m">01234567890112345678901234</span>
 !@#$%^<span class="p">&amp;</span>*<span class="o">()</span>-<span class="o">=[]{}</span><span class="p">;</span><span class="s1">&#39;:&#39;</span>,.&lt;&gt;/?
 <span class="m">01234567890112345678901234</span>
 abcdefghijklmnopqrstuvwxyz
 
-Listing objects
-- MyObjectKey  <span class="o">(</span><span class="nv">size</span> <span class="o">=</span> <span class="m">135</span><span class="o">)</span>
+Listing<span class="w"> </span>objects
+-<span class="w"> </span>MyObjectKey<span class="w">  </span><span class="o">(</span><span class="nv">size</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">135</span><span class="o">)</span>
 
-Deleting an object
+Deleting<span class="w"> </span>an<span class="w"> </span>object
 
-Deleting bucket my-first-s3-bucket-fa8375c2-a751-47f9-9616-014b7249cf24
+Deleting<span class="w"> </span>bucket<span class="w"> </span>my-first-s3-bucket-fa8375c2-a751-47f9-9616-014b7249cf24
 
-<span class="o">[</span>INFO<span class="o">]</span> ------------------------------------------------------------------------
-<span class="o">[</span>INFO<span class="o">]</span> BUILD SUCCESS
-<span class="o">[</span>INFO<span class="o">]</span> ------------------------------------------------------------------------
-<span class="o">[</span>INFO<span class="o">]</span> Total time: <span class="m">9</span>.467 s
-<span class="o">[</span>INFO<span class="o">]</span> Finished at: <span class="m">2016</span>-12-28T20:06:13+09:00
-<span class="o">[</span>INFO<span class="o">]</span> Final Memory: 13M/208M
-<span class="o">[</span>INFO<span class="o">]</span> ------------------------------------------------------------------------
-&gt;&gt;&gt; elapsed <span class="nb">time</span> 11s
+<span class="o">[</span>INFO<span class="o">]</span><span class="w"> </span>------------------------------------------------------------------------
+<span class="o">[</span>INFO<span class="o">]</span><span class="w"> </span>BUILD<span class="w"> </span>SUCCESS
+<span class="o">[</span>INFO<span class="o">]</span><span class="w"> </span>------------------------------------------------------------------------
+<span class="o">[</span>INFO<span class="o">]</span><span class="w"> </span>Total<span class="w"> </span>time:<span class="w"> </span><span class="m">9</span>.467<span class="w"> </span>s
+<span class="o">[</span>INFO<span class="o">]</span><span class="w"> </span>Finished<span class="w"> </span>at:<span class="w"> </span><span class="m">2016</span>-12-28T20:06:13+09:00
+<span class="o">[</span>INFO<span class="o">]</span><span class="w"> </span>Final<span class="w"> </span>Memory:<span class="w"> </span>13M/208M
+<span class="o">[</span>INFO<span class="o">]</span><span class="w"> </span>------------------------------------------------------------------------
+&gt;&gt;&gt;<span class="w"> </span>elapsed<span class="w"> </span><span class="nb">time</span><span class="w"> </span>11s
 </pre></div>
 </div>
 </div>
@@ -231,7 +231,7 @@ Deleting bucket my-first-s3-bucket-fa8375c2-a751-47f9-9616-014b7249cf24
     </p>
     <p>
         &copy; Copyright 2018, Yukihiro Okada.<br/>
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.7.4.<br/>
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.8.6.<br/>
     </p>
   </div>
 </footer>

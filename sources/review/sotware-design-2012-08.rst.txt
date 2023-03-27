@@ -1,0 +1,30 @@
+Title
+=====
+
+読みたくなった本リスト
+----------------------
+
+- `Amazon.co.jp： デザイニング・インターフェース 第2版
+  ―パターンによる実践的インタラクションデザイン: Jenifer Tidwell,
+  ソシオメディア株式会社（監訳）, 浅野 紀予: 本
+  <http://www.amazon.co.jp/%E3%83%87%E3%82%B6%E3%82%A4%E3%83%8B%E3%83%B3%E3%82%B0%E3%83%BB%E3%82%A4%E3%83%B3%E3%82%BF%E3%83%BC%E3%83%95%E3%82%A7%E3%83%BC%E3%82%B9-%E7%AC%AC2%E7%89%88-%E2%80%95%E3%83%91%E3%82%BF%E3%83%BC%E3%83%B3%E3%81%AB%E3%82%88%E3%82%8B%E5%AE%9F%E8%B7%B5%E7%9A%84%E3%82%A4%E3%83%B3%E3%82%BF%E3%83%A9%E3%82%AF%E3%82%B7%E3%83%A7%E3%83%B3%E3%83%87%E3%82%B6%E3%82%A4%E3%83%B3-Jenifer-Tidwell/dp/4873115310/ref=sr_1_1?ie=UTF8&qid=1346596721&sr=8-1>`_
+- `Amazon.co.jp： Red Hat RPM Guide (redhat PRESS): エリック
+  フォスター・ジョンソン, Eric Foster‐Johnson, 中川 和夫, ヴァインカーブ: 本
+  <http://www.amazon.co.jp/Red-Hat-Guide-redhat-PRESS/dp/4797324937/ref=sr_1_sc_1?ie=UTF8&qid=1346596961&sr=8-1-spell>`_
+- Amazon.co.jp： Inside Linux Software
+  オープンソースソフトウェアのからくりとしくみ: 佐藤 竜一: 本
+  http://www.amazon.co.jp/Inside-Linux-Software-%E3%82%AA%E3%83%BC%E3%83%97%E3%83%B3%E3%82%BD%E3%83%BC%E3%82%B9%E3%82%BD%E3%83%95%E3%83%88%E3%82%A6%E3%82%A7%E3%82%A2%E3%81%AE%E3%81%8B%E3%82%89%E3%81%8F%E3%82%8A%E3%81%A8%E3%81%97%E3%81%8F%E3%81%BF-%E4%BD%90%E8%97%A4/dp/4798112836/ref=sr_1_1?s=books&ie=UTF8&qid=1346597130&sr=1-1
+- `Amazon.co.jp： エンタープライズ アプリケーションアーキテクチャパターン
+  (Object Oriented Selection): マーチン・ファウラー, 長瀬 嘉秀, 株式会社
+  テクノロジックアート: 本
+  <http://www.amazon.co.jp/%E3%82%A8%E3%83%B3%E3%82%BF%E3%83%BC%E3%83%97%E3%83%A9%E3%82%A4%E3%82%BA-%E3%82%A2%E3%83%97%E3%83%AA%E3%82%B1%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E3%82%A2%E3%83%BC%E3%82%AD%E3%83%86%E3%82%AF%E3%83%81%E3%83%A3%E3%83%91%E3%82%BF%E3%83%BC%E3%83%B3-Object-Oriented-Selection/dp/4798105538/ref=sr_1_1?s=books&ie=UTF8&qid=1346597204&sr=1-1>`_
+- `Amazon.co.jp：
+  ディフェンシブ・ウェブデザインの技術―「うまくいかないとき」に備えたデザイン、「上手に」間違えるためのデザイン
+  (Web designing books): 37signals, ソシオメディア, 吉川 典秀: 本
+  <http://www.amazon.co.jp/%E3%83%87%E3%82%A3%E3%83%95%E3%82%A7%E3%83%B3%E3%82%B7%E3%83%96%E3%83%BB%E3%82%A6%E3%82%A7%E3%83%96%E3%83%87%E3%82%B6%E3%82%A4%E3%83%B3%E3%81%AE%E6%8A%80%E8%A1%93%E2%80%95%E3%80%8C%E3%81%86%E3%81%BE%E3%81%8F%E3%81%84%E3%81%8B%E3%81%AA%E3%81%84%E3%81%A8%E3%81%8D%E3%80%8D%E3%81%AB%E5%82%99%E3%81%88%E3%81%9F%E3%83%87%E3%82%B6%E3%82%A4%E3%83%B3%E3%80%81%E3%80%8C%E4%B8%8A%E6%89%8B%E3%81%AB%E3%80%8D%E9%96%93%E9%81%95%E3%81%88%E3%82%8B%E3%81%9F%E3%82%81%E3%81%AE%E3%83%87%E3%82%B6%E3%82%A4%E3%83%B3-Web-designing-books-37signals/dp/4839916063/ref=sr_1_1?s=books&ie=UTF8&qid=1346597307&sr=1-1>`_
+- `Amazon.co.jp： 誰のためのデザイン?―認知科学者のデザイン原論  (新曜社認知科学選書): ドナルド・A. ノーマン, 野島 久雄, D.A. ノーマン: 本 <http://www.amazon.co.jp/%E8%AA%B0%E3%81%AE%E3%81%9F%E3%82%81%E3%81%AE%E3%83%87%E3%82%B6%E3%82%A4%E3%83%B3-%E2%80%95%E8%AA%8D%E7%9F%A5%E7%A7%91%E5%AD%A6%E8%80%85%E3%81%AE%E3%83%87%E3%82%B6%E3%82%A4%E3%83%B3%E5%8E%9F%E8%AB%96-%E6%96%B0%E6%9B%9C%E7%A4%BE%E8%AA%8D%E7%9F%A5%E7%A7%91%E5%AD%A6%E9%81%B8%E6%9B%B8-%E3%83%89%E3%83%8A%E3%83%AB%E3%83%89%E3%83%BBA-%E3%83%8E%E3%83%BC%E3%83%9E%E3%83%B3/dp/478850362X/ref=sr_1_1?s=books&ie=UTF8&qid=1346597404&sr=1-1>`_
+- `Amazon.co.jp： デザイン思考が世界を変える―イノベーションを導く新しい考え方 (ハヤカワ新書juice): ティム ブラウン, Tim Brown, 千葉 敏生: 本 <http://www.amazon.co.jp/%E3%83%87%E3%82%B6%E3%82%A4%E3%83%B3%E6%80%9D%E8%80%83%E3%81%8C%E4%B8%96%E7%95%8C%E3%82%92%E5%A4%89%E3%81%88%E3%82%8B%E2%80%95%E3%82%A4%E3%83%8E%E3%83%99%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E3%82%92%E5%B0%8E%E3%81%8F%E6%96%B0%E3%81%97%E3%81%84%E8%80%83%E3%81%88%E6%96%B9-%E3%83%8F%E3%83%A4%E3%82%AB%E3%83%AF%E6%96%B0%E6%9B%B8juice-%E3%83%86%E3%82%A3%E3%83%A0-%E3%83%96%E3%83%A9%E3%82%A6%E3%83%B3/dp/4153200123/ref=sr_1_fkmr0_2?s=books&ie=UTF8&qid=1346597498&sr=1-2-fkmr0>`_
+- `Amazon.co.jp： 詳解TCP/IP〈Vol.1〉プロトコル: W.リチャード スティーヴンス, W.Richard Stevens, 橘 康雄, 井上 尚司: 本 <http://www.amazon.co.jp/%E8%A9%B3%E8%A7%A3TCP-IP%E3%80%88Vol-1%E3%80%89%E3%83%97%E3%83%AD%E3%83%88%E3%82%B3%E3%83%AB-W-%E3%83%AA%E3%83%81%E3%83%A3%E3%83%BC%E3%83%89-%E3%82%B9%E3%83%86%E3%82%A3%E3%83%BC%E3%83%B4%E3%83%B3%E3%82%B9/dp/4894713209/ref=sr_1_1?s=books&ie=UTF8&qid=1346597613&sr=1-1>`_
+- `Amazon.co.jp： 挑まなければ、得られない Nothing ventured, nothing gained. (インプレス選書): 及川 卓也: 本 <http://www.amazon.co.jp/%E6%8C%91%E3%81%BE%E3%81%AA%E3%81%91%E3%82%8C%E3%81%B0%E3%80%81%E5%BE%97%E3%82%89%E3%82%8C%E3%81%AA%E3%81%84-Nothing-ventured-nothing-gained/dp/4844332023/ref=sr_1_1?ie=UTF8&qid=1346597668&sr=8-1>`_
+- `Amazon.co.jp： ひきこもれ―ひとりの時間をもつということ (だいわ文庫): 吉本 隆明: 本 <http://www.amazon.co.jp/%E3%81%B2%E3%81%8D%E3%81%93%E3%82%82%E3%82%8C%E2%80%95%E3%81%B2%E3%81%A8%E3%82%8A%E3%81%AE%E6%99%82%E9%96%93%E3%82%92%E3%82%82%E3%81%A4%E3%81%A8%E3%81%84%E3%81%86%E3%81%93%E3%81%A8-%E3%81%A0%E3%81%84%E3%82%8F%E6%96%87%E5%BA%AB-%E5%90%89%E6%9C%AC-%E9%9A%86%E6%98%8E/dp/447930066X/ref=sr_1_1?s=books&ie=UTF8&qid=1346599273&sr=1-1>`_
+

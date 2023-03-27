@@ -7,20 +7,21 @@
     <title>Cyberduckからs3につないでみる &#8212; my blog 2018.070401 documentation</title>
     <link rel="stylesheet" href="../static/bootstrap-sphinx.css" type="text/css" />
     <link rel="stylesheet" href="../static/pygments.css" type="text/css" />
-    <script type="text/javascript" src="../static/documentation_options.js"></script>
+    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../static/documentation_options.js"></script>
     <script type="text/javascript" src="../static/jquery.js"></script>
     <script type="text/javascript" src="../static/underscore.js"></script>
     <script type="text/javascript" src="../static/doctools.js"></script>
-    <script type="text/javascript" src="../static/js/jquery-1.11.0.min.js"></script>
-    <script type="text/javascript" src="../static/js/jquery-fix.js"></script>
-    <script type="text/javascript" src="../static/bootstrap-3.3.7/js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="../static/bootstrap-sphinx.js"></script>
+    <script type="text/javascript" src="../static/language_data.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
 <meta charset='utf-8'>
 <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
 <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
 <meta name="apple-mobile-web-app-capable" content="yes">
+<script type="text/javascript" src="../static/js/jquery-1.12.4.min.js"></script>
+<script type="text/javascript" src="../static/js/jquery-fix.js"></script>
+<script type="text/javascript" src="../static/bootstrap-3.4.1/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="../static/bootstrap-sphinx.js"></script>
 
   </head><body>
 
@@ -51,8 +52,7 @@
   <ul class="dropdown-menu globaltoc"
       role="menu"
       aria-labelledby="dLabelGlobalToc"><ul>
-<li class="toctree-l1"><a class="reference internal" href="../history.html">職務経歴</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../history2.html">職務経歴 その2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../history1.html">職務経歴</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../pg_history.html">プログラミング履歴</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../skill.html">技術スキル</a></li>
 </ul>
@@ -116,7 +116,7 @@
 
 <div class="container">
   <div class="row">
-    <div class="col-md-12 content">
+    <div class="body col-md-12 content" role="main">
       
   <div class="section" id="cyberducks3">
 <h1>Cyberduckからs3につないでみる<a class="headerlink" href="#cyberducks3" title="Permalink to this headline">¶</a></h1>
@@ -137,18 +137,18 @@
 <div class="section" id="building">
 <h3>Building<a class="headerlink" href="#building" title="Permalink to this headline">¶</a></h3>
 <p><a class="reference external" href="https://orc.apache.org/docs/building.html">Building ORC</a></p>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>% <span class="nb">cd</span> java
-% mvn package
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>%<span class="w"> </span><span class="nb">cd</span><span class="w"> </span>java
+%<span class="w"> </span>mvn<span class="w"> </span>package
 </pre></div>
 </div>
 </div>
 <div class="section" id="check">
 <h3>Check<a class="headerlink" href="#check" title="Permalink to this headline">¶</a></h3>
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="c1"># To get information about an ORC file, use the orcfiledump command.</span>
-% hive --orcfiledump &lt;path_to_file&gt;
+%<span class="w"> </span>hive<span class="w"> </span>--orcfiledump<span class="w"> </span>&lt;path_to_file&gt;
 
 <span class="c1"># As of Hive 1.1, to display the data in the ORC file, use:</span>
-% hive --orcfiledump -d &lt;path_to_file&gt;
+%<span class="w"> </span>hive<span class="w"> </span>--orcfiledump<span class="w"> </span>-d<span class="w"> </span>&lt;path_to_file&gt;
 </pre></div>
 </div>
 </div>
@@ -168,120 +168,120 @@
 <ul class="simple">
 <li><a class="reference external" href="https://aws.amazon.com/jp/blogs/aws/amazon-athena-interactive-sql-queries-for-data-in-amazon-s3/">Amazon Athena – Interactive SQL Queries for Data in Amazon S3 | AWS Blog</a></li>
 </ul>
-<div class="highlight-sql notranslate"><div class="highlight"><pre><span></span><span class="k">CREATE</span> <span class="k">EXTERNAL</span> <span class="k">TABLE</span> <span class="k">IF</span> <span class="k">NOT</span> <span class="k">EXISTS</span> <span class="n">flights_parquet</span> <span class="p">(</span>
-<span class="n">yr</span> <span class="nb">INT</span><span class="p">,</span>
-<span class="n">quarter</span> <span class="nb">INT</span><span class="p">,</span>
-<span class="k">month</span> <span class="nb">INT</span><span class="p">,</span>
-<span class="n">dayofmonth</span> <span class="nb">INT</span><span class="p">,</span>
-<span class="n">dayofweek</span> <span class="nb">INT</span><span class="p">,</span>
-<span class="n">flightdate</span> <span class="n">STRING</span><span class="p">,</span>
-<span class="n">uniquecarrier</span> <span class="n">STRING</span><span class="p">,</span>
-<span class="n">airlineid</span> <span class="nb">INT</span><span class="p">,</span>
-<span class="n">carrier</span> <span class="n">STRING</span><span class="p">,</span>
-<span class="n">tailnum</span> <span class="n">STRING</span><span class="p">,</span>
-<span class="n">flightnum</span> <span class="n">STRING</span><span class="p">,</span>
-<span class="n">originairportid</span> <span class="nb">INT</span><span class="p">,</span>
-<span class="n">originairportseqid</span> <span class="nb">INT</span><span class="p">,</span>
-<span class="n">origincitymarketid</span> <span class="nb">INT</span><span class="p">,</span>
-<span class="n">origin</span> <span class="n">STRING</span><span class="p">,</span>
-<span class="n">origincityname</span> <span class="n">STRING</span><span class="p">,</span>
-<span class="n">originstate</span> <span class="n">STRING</span><span class="p">,</span>
-<span class="n">originstatefips</span> <span class="n">STRING</span><span class="p">,</span>
-<span class="n">originstatename</span> <span class="n">STRING</span><span class="p">,</span>
-<span class="n">originwac</span> <span class="nb">INT</span><span class="p">,</span>
-<span class="n">destairportid</span> <span class="nb">INT</span><span class="p">,</span>
-<span class="n">destairportseqid</span> <span class="nb">INT</span><span class="p">,</span>
-<span class="n">destcitymarketid</span> <span class="nb">INT</span><span class="p">,</span>
-<span class="n">dest</span> <span class="n">STRING</span><span class="p">,</span>
-<span class="n">destcityname</span> <span class="n">STRING</span><span class="p">,</span>
-<span class="n">deststate</span> <span class="n">STRING</span><span class="p">,</span>
-<span class="n">deststatefips</span> <span class="n">STRING</span><span class="p">,</span>
-<span class="n">deststatename</span> <span class="n">STRING</span><span class="p">,</span>
-<span class="n">destwac</span> <span class="nb">INT</span><span class="p">,</span>
-<span class="n">crsdeptime</span> <span class="n">STRING</span><span class="p">,</span>
-<span class="n">deptime</span> <span class="n">STRING</span><span class="p">,</span>
-<span class="n">depdelay</span> <span class="nb">INT</span><span class="p">,</span>
-<span class="n">depdelayminutes</span> <span class="nb">INT</span><span class="p">,</span>
-<span class="n">depdel15</span> <span class="nb">INT</span><span class="p">,</span>
-<span class="n">departuredelaygroups</span> <span class="nb">INT</span><span class="p">,</span>
-<span class="n">deptimeblk</span> <span class="n">STRING</span><span class="p">,</span>
-<span class="n">taxiout</span> <span class="nb">INT</span><span class="p">,</span>
-<span class="n">wheelsoff</span> <span class="n">STRING</span><span class="p">,</span>
-<span class="n">wheelson</span> <span class="n">STRING</span><span class="p">,</span>
-<span class="n">taxiin</span> <span class="nb">INT</span><span class="p">,</span>
-<span class="n">crsarrtime</span> <span class="nb">INT</span><span class="p">,</span>
-<span class="n">arrtime</span> <span class="n">STRING</span><span class="p">,</span>
-<span class="n">arrdelay</span> <span class="nb">INT</span><span class="p">,</span>
-<span class="n">arrdelayminutes</span> <span class="nb">INT</span><span class="p">,</span>
-<span class="n">arrdel15</span> <span class="nb">INT</span><span class="p">,</span>
-<span class="n">arrivaldelaygroups</span> <span class="nb">INT</span><span class="p">,</span>
-<span class="n">arrtimeblk</span> <span class="n">STRING</span><span class="p">,</span>
-<span class="n">cancelled</span> <span class="nb">INT</span><span class="p">,</span>
-<span class="n">cancellationcode</span> <span class="n">STRING</span><span class="p">,</span>
-<span class="n">diverted</span> <span class="nb">INT</span><span class="p">,</span>
-<span class="n">crselapsedtime</span> <span class="nb">INT</span><span class="p">,</span>
-<span class="n">actualelapsedtime</span> <span class="nb">INT</span><span class="p">,</span>
-<span class="n">airtime</span> <span class="nb">INT</span><span class="p">,</span>
-<span class="n">flights</span> <span class="nb">INT</span><span class="p">,</span>
-<span class="n">distance</span> <span class="nb">INT</span><span class="p">,</span>
-<span class="n">distancegroup</span> <span class="nb">INT</span><span class="p">,</span>
-<span class="n">carrierdelay</span> <span class="nb">INT</span><span class="p">,</span>
-<span class="n">weatherdelay</span> <span class="nb">INT</span><span class="p">,</span>
-<span class="n">nasdelay</span> <span class="nb">INT</span><span class="p">,</span>
-<span class="n">securitydelay</span> <span class="nb">INT</span><span class="p">,</span>
-<span class="n">lateaircraftdelay</span> <span class="nb">INT</span><span class="p">,</span>
-<span class="n">firstdeptime</span> <span class="n">STRING</span><span class="p">,</span>
-<span class="n">totaladdgtime</span> <span class="nb">INT</span><span class="p">,</span>
-<span class="n">longestaddgtime</span> <span class="nb">INT</span><span class="p">,</span>
-<span class="n">divairportlandings</span> <span class="nb">INT</span><span class="p">,</span>
-<span class="n">divreacheddest</span> <span class="nb">INT</span><span class="p">,</span>
-<span class="n">divactualelapsedtime</span> <span class="nb">INT</span><span class="p">,</span>
-<span class="n">divarrdelay</span> <span class="nb">INT</span><span class="p">,</span>
-<span class="n">divdistance</span> <span class="nb">INT</span><span class="p">,</span>
-<span class="n">div1airport</span> <span class="n">STRING</span><span class="p">,</span>
-<span class="n">div1airportid</span> <span class="nb">INT</span><span class="p">,</span>
-<span class="n">div1airportseqid</span> <span class="nb">INT</span><span class="p">,</span>
-<span class="n">div1wheelson</span> <span class="n">STRING</span><span class="p">,</span>
-<span class="n">div1totalgtime</span> <span class="nb">INT</span><span class="p">,</span>
-<span class="n">div1longestgtime</span> <span class="nb">INT</span><span class="p">,</span>
-<span class="n">div1wheelsoff</span> <span class="n">STRING</span><span class="p">,</span>
-<span class="n">div1tailnum</span> <span class="n">STRING</span><span class="p">,</span>
-<span class="n">div2airport</span> <span class="n">STRING</span><span class="p">,</span>
-<span class="n">div2airportid</span> <span class="nb">INT</span><span class="p">,</span>
-<span class="n">div2airportseqid</span> <span class="nb">INT</span><span class="p">,</span>
-<span class="n">div2wheelson</span> <span class="n">STRING</span><span class="p">,</span>
-<span class="n">div2totalgtime</span> <span class="nb">INT</span><span class="p">,</span>
-<span class="n">div2longestgtime</span> <span class="nb">INT</span><span class="p">,</span>
-<span class="n">div2wheelsoff</span> <span class="n">STRING</span><span class="p">,</span>
-<span class="n">div2tailnum</span> <span class="n">STRING</span><span class="p">,</span>
-<span class="n">div3airport</span> <span class="n">STRING</span><span class="p">,</span>
-<span class="n">div3airportid</span> <span class="nb">INT</span><span class="p">,</span>
-<span class="n">div3airportseqid</span> <span class="nb">INT</span><span class="p">,</span>
-<span class="n">div3wheelson</span> <span class="n">STRING</span><span class="p">,</span>
-<span class="n">div3totalgtime</span> <span class="nb">INT</span><span class="p">,</span>
-<span class="n">div3longestgtime</span> <span class="nb">INT</span><span class="p">,</span>
-<span class="n">div3wheelsoff</span> <span class="n">STRING</span><span class="p">,</span>
-<span class="n">div3tailnum</span> <span class="n">STRING</span><span class="p">,</span>
-<span class="n">div4airport</span> <span class="n">STRING</span><span class="p">,</span>
-<span class="n">div4airportid</span> <span class="nb">INT</span><span class="p">,</span>
-<span class="n">div4airportseqid</span> <span class="nb">INT</span><span class="p">,</span>
-<span class="n">div4wheelson</span> <span class="n">STRING</span><span class="p">,</span>
-<span class="n">div4totalgtime</span> <span class="nb">INT</span><span class="p">,</span>
-<span class="n">div4longestgtime</span> <span class="nb">INT</span><span class="p">,</span>
-<span class="n">div4wheelsoff</span> <span class="n">STRING</span><span class="p">,</span>
-<span class="n">div4tailnum</span> <span class="n">STRING</span><span class="p">,</span>
-<span class="n">div5airport</span> <span class="n">STRING</span><span class="p">,</span>
-<span class="n">div5airportid</span> <span class="nb">INT</span><span class="p">,</span>
-<span class="n">div5airportseqid</span> <span class="nb">INT</span><span class="p">,</span>
-<span class="n">div5wheelson</span> <span class="n">STRING</span><span class="p">,</span>
-<span class="n">div5totalgtime</span> <span class="nb">INT</span><span class="p">,</span>
-<span class="n">div5longestgtime</span> <span class="nb">INT</span><span class="p">,</span>
-<span class="n">div5wheelsoff</span> <span class="n">STRING</span><span class="p">,</span>
-<span class="n">div5tailnum</span> <span class="n">STRING</span>
+<div class="highlight-sql notranslate"><div class="highlight"><pre><span></span><span class="k">CREATE</span><span class="w"> </span><span class="k">EXTERNAL</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="k">IF</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">EXISTS</span><span class="w"> </span><span class="n">flights_parquet</span><span class="w"> </span><span class="p">(</span>
+<span class="n">yr</span><span class="w"> </span><span class="nb">INT</span><span class="p">,</span>
+<span class="n">quarter</span><span class="w"> </span><span class="nb">INT</span><span class="p">,</span>
+<span class="k">month</span><span class="w"> </span><span class="nb">INT</span><span class="p">,</span>
+<span class="n">dayofmonth</span><span class="w"> </span><span class="nb">INT</span><span class="p">,</span>
+<span class="n">dayofweek</span><span class="w"> </span><span class="nb">INT</span><span class="p">,</span>
+<span class="n">flightdate</span><span class="w"> </span><span class="n">STRING</span><span class="p">,</span>
+<span class="n">uniquecarrier</span><span class="w"> </span><span class="n">STRING</span><span class="p">,</span>
+<span class="n">airlineid</span><span class="w"> </span><span class="nb">INT</span><span class="p">,</span>
+<span class="n">carrier</span><span class="w"> </span><span class="n">STRING</span><span class="p">,</span>
+<span class="n">tailnum</span><span class="w"> </span><span class="n">STRING</span><span class="p">,</span>
+<span class="n">flightnum</span><span class="w"> </span><span class="n">STRING</span><span class="p">,</span>
+<span class="n">originairportid</span><span class="w"> </span><span class="nb">INT</span><span class="p">,</span>
+<span class="n">originairportseqid</span><span class="w"> </span><span class="nb">INT</span><span class="p">,</span>
+<span class="n">origincitymarketid</span><span class="w"> </span><span class="nb">INT</span><span class="p">,</span>
+<span class="n">origin</span><span class="w"> </span><span class="n">STRING</span><span class="p">,</span>
+<span class="n">origincityname</span><span class="w"> </span><span class="n">STRING</span><span class="p">,</span>
+<span class="n">originstate</span><span class="w"> </span><span class="n">STRING</span><span class="p">,</span>
+<span class="n">originstatefips</span><span class="w"> </span><span class="n">STRING</span><span class="p">,</span>
+<span class="n">originstatename</span><span class="w"> </span><span class="n">STRING</span><span class="p">,</span>
+<span class="n">originwac</span><span class="w"> </span><span class="nb">INT</span><span class="p">,</span>
+<span class="n">destairportid</span><span class="w"> </span><span class="nb">INT</span><span class="p">,</span>
+<span class="n">destairportseqid</span><span class="w"> </span><span class="nb">INT</span><span class="p">,</span>
+<span class="n">destcitymarketid</span><span class="w"> </span><span class="nb">INT</span><span class="p">,</span>
+<span class="n">dest</span><span class="w"> </span><span class="n">STRING</span><span class="p">,</span>
+<span class="n">destcityname</span><span class="w"> </span><span class="n">STRING</span><span class="p">,</span>
+<span class="n">deststate</span><span class="w"> </span><span class="n">STRING</span><span class="p">,</span>
+<span class="n">deststatefips</span><span class="w"> </span><span class="n">STRING</span><span class="p">,</span>
+<span class="n">deststatename</span><span class="w"> </span><span class="n">STRING</span><span class="p">,</span>
+<span class="n">destwac</span><span class="w"> </span><span class="nb">INT</span><span class="p">,</span>
+<span class="n">crsdeptime</span><span class="w"> </span><span class="n">STRING</span><span class="p">,</span>
+<span class="n">deptime</span><span class="w"> </span><span class="n">STRING</span><span class="p">,</span>
+<span class="n">depdelay</span><span class="w"> </span><span class="nb">INT</span><span class="p">,</span>
+<span class="n">depdelayminutes</span><span class="w"> </span><span class="nb">INT</span><span class="p">,</span>
+<span class="n">depdel15</span><span class="w"> </span><span class="nb">INT</span><span class="p">,</span>
+<span class="n">departuredelaygroups</span><span class="w"> </span><span class="nb">INT</span><span class="p">,</span>
+<span class="n">deptimeblk</span><span class="w"> </span><span class="n">STRING</span><span class="p">,</span>
+<span class="n">taxiout</span><span class="w"> </span><span class="nb">INT</span><span class="p">,</span>
+<span class="n">wheelsoff</span><span class="w"> </span><span class="n">STRING</span><span class="p">,</span>
+<span class="n">wheelson</span><span class="w"> </span><span class="n">STRING</span><span class="p">,</span>
+<span class="n">taxiin</span><span class="w"> </span><span class="nb">INT</span><span class="p">,</span>
+<span class="n">crsarrtime</span><span class="w"> </span><span class="nb">INT</span><span class="p">,</span>
+<span class="n">arrtime</span><span class="w"> </span><span class="n">STRING</span><span class="p">,</span>
+<span class="n">arrdelay</span><span class="w"> </span><span class="nb">INT</span><span class="p">,</span>
+<span class="n">arrdelayminutes</span><span class="w"> </span><span class="nb">INT</span><span class="p">,</span>
+<span class="n">arrdel15</span><span class="w"> </span><span class="nb">INT</span><span class="p">,</span>
+<span class="n">arrivaldelaygroups</span><span class="w"> </span><span class="nb">INT</span><span class="p">,</span>
+<span class="n">arrtimeblk</span><span class="w"> </span><span class="n">STRING</span><span class="p">,</span>
+<span class="n">cancelled</span><span class="w"> </span><span class="nb">INT</span><span class="p">,</span>
+<span class="n">cancellationcode</span><span class="w"> </span><span class="n">STRING</span><span class="p">,</span>
+<span class="n">diverted</span><span class="w"> </span><span class="nb">INT</span><span class="p">,</span>
+<span class="n">crselapsedtime</span><span class="w"> </span><span class="nb">INT</span><span class="p">,</span>
+<span class="n">actualelapsedtime</span><span class="w"> </span><span class="nb">INT</span><span class="p">,</span>
+<span class="n">airtime</span><span class="w"> </span><span class="nb">INT</span><span class="p">,</span>
+<span class="n">flights</span><span class="w"> </span><span class="nb">INT</span><span class="p">,</span>
+<span class="n">distance</span><span class="w"> </span><span class="nb">INT</span><span class="p">,</span>
+<span class="n">distancegroup</span><span class="w"> </span><span class="nb">INT</span><span class="p">,</span>
+<span class="n">carrierdelay</span><span class="w"> </span><span class="nb">INT</span><span class="p">,</span>
+<span class="n">weatherdelay</span><span class="w"> </span><span class="nb">INT</span><span class="p">,</span>
+<span class="n">nasdelay</span><span class="w"> </span><span class="nb">INT</span><span class="p">,</span>
+<span class="n">securitydelay</span><span class="w"> </span><span class="nb">INT</span><span class="p">,</span>
+<span class="n">lateaircraftdelay</span><span class="w"> </span><span class="nb">INT</span><span class="p">,</span>
+<span class="n">firstdeptime</span><span class="w"> </span><span class="n">STRING</span><span class="p">,</span>
+<span class="n">totaladdgtime</span><span class="w"> </span><span class="nb">INT</span><span class="p">,</span>
+<span class="n">longestaddgtime</span><span class="w"> </span><span class="nb">INT</span><span class="p">,</span>
+<span class="n">divairportlandings</span><span class="w"> </span><span class="nb">INT</span><span class="p">,</span>
+<span class="n">divreacheddest</span><span class="w"> </span><span class="nb">INT</span><span class="p">,</span>
+<span class="n">divactualelapsedtime</span><span class="w"> </span><span class="nb">INT</span><span class="p">,</span>
+<span class="n">divarrdelay</span><span class="w"> </span><span class="nb">INT</span><span class="p">,</span>
+<span class="n">divdistance</span><span class="w"> </span><span class="nb">INT</span><span class="p">,</span>
+<span class="n">div1airport</span><span class="w"> </span><span class="n">STRING</span><span class="p">,</span>
+<span class="n">div1airportid</span><span class="w"> </span><span class="nb">INT</span><span class="p">,</span>
+<span class="n">div1airportseqid</span><span class="w"> </span><span class="nb">INT</span><span class="p">,</span>
+<span class="n">div1wheelson</span><span class="w"> </span><span class="n">STRING</span><span class="p">,</span>
+<span class="n">div1totalgtime</span><span class="w"> </span><span class="nb">INT</span><span class="p">,</span>
+<span class="n">div1longestgtime</span><span class="w"> </span><span class="nb">INT</span><span class="p">,</span>
+<span class="n">div1wheelsoff</span><span class="w"> </span><span class="n">STRING</span><span class="p">,</span>
+<span class="n">div1tailnum</span><span class="w"> </span><span class="n">STRING</span><span class="p">,</span>
+<span class="n">div2airport</span><span class="w"> </span><span class="n">STRING</span><span class="p">,</span>
+<span class="n">div2airportid</span><span class="w"> </span><span class="nb">INT</span><span class="p">,</span>
+<span class="n">div2airportseqid</span><span class="w"> </span><span class="nb">INT</span><span class="p">,</span>
+<span class="n">div2wheelson</span><span class="w"> </span><span class="n">STRING</span><span class="p">,</span>
+<span class="n">div2totalgtime</span><span class="w"> </span><span class="nb">INT</span><span class="p">,</span>
+<span class="n">div2longestgtime</span><span class="w"> </span><span class="nb">INT</span><span class="p">,</span>
+<span class="n">div2wheelsoff</span><span class="w"> </span><span class="n">STRING</span><span class="p">,</span>
+<span class="n">div2tailnum</span><span class="w"> </span><span class="n">STRING</span><span class="p">,</span>
+<span class="n">div3airport</span><span class="w"> </span><span class="n">STRING</span><span class="p">,</span>
+<span class="n">div3airportid</span><span class="w"> </span><span class="nb">INT</span><span class="p">,</span>
+<span class="n">div3airportseqid</span><span class="w"> </span><span class="nb">INT</span><span class="p">,</span>
+<span class="n">div3wheelson</span><span class="w"> </span><span class="n">STRING</span><span class="p">,</span>
+<span class="n">div3totalgtime</span><span class="w"> </span><span class="nb">INT</span><span class="p">,</span>
+<span class="n">div3longestgtime</span><span class="w"> </span><span class="nb">INT</span><span class="p">,</span>
+<span class="n">div3wheelsoff</span><span class="w"> </span><span class="n">STRING</span><span class="p">,</span>
+<span class="n">div3tailnum</span><span class="w"> </span><span class="n">STRING</span><span class="p">,</span>
+<span class="n">div4airport</span><span class="w"> </span><span class="n">STRING</span><span class="p">,</span>
+<span class="n">div4airportid</span><span class="w"> </span><span class="nb">INT</span><span class="p">,</span>
+<span class="n">div4airportseqid</span><span class="w"> </span><span class="nb">INT</span><span class="p">,</span>
+<span class="n">div4wheelson</span><span class="w"> </span><span class="n">STRING</span><span class="p">,</span>
+<span class="n">div4totalgtime</span><span class="w"> </span><span class="nb">INT</span><span class="p">,</span>
+<span class="n">div4longestgtime</span><span class="w"> </span><span class="nb">INT</span><span class="p">,</span>
+<span class="n">div4wheelsoff</span><span class="w"> </span><span class="n">STRING</span><span class="p">,</span>
+<span class="n">div4tailnum</span><span class="w"> </span><span class="n">STRING</span><span class="p">,</span>
+<span class="n">div5airport</span><span class="w"> </span><span class="n">STRING</span><span class="p">,</span>
+<span class="n">div5airportid</span><span class="w"> </span><span class="nb">INT</span><span class="p">,</span>
+<span class="n">div5airportseqid</span><span class="w"> </span><span class="nb">INT</span><span class="p">,</span>
+<span class="n">div5wheelson</span><span class="w"> </span><span class="n">STRING</span><span class="p">,</span>
+<span class="n">div5totalgtime</span><span class="w"> </span><span class="nb">INT</span><span class="p">,</span>
+<span class="n">div5longestgtime</span><span class="w"> </span><span class="nb">INT</span><span class="p">,</span>
+<span class="n">div5wheelsoff</span><span class="w"> </span><span class="n">STRING</span><span class="p">,</span>
+<span class="n">div5tailnum</span><span class="w"> </span><span class="n">STRING</span>
 <span class="p">)</span>
-<span class="n">PARTITIONED</span> <span class="k">BY</span> <span class="p">(</span><span class="k">year</span> <span class="n">String</span><span class="p">)</span>
-<span class="n">STORED</span> <span class="k">AS</span> <span class="n">PARQUET</span>
-<span class="k">LOCATION</span> <span class="s1">&#39;s3://athena-examples/flight/parquet/&#39;</span><span class="p">;</span>
+<span class="n">PARTITIONED</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="p">(</span><span class="k">year</span><span class="w"> </span><span class="n">String</span><span class="p">)</span>
+<span class="n">STORED</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">PARQUET</span>
+<span class="k">LOCATION</span><span class="w"> </span><span class="s1">&#39;s3://athena-examples/flight/parquet/&#39;</span><span class="p">;</span>
 </pre></div>
 </div>
 </div>
@@ -300,7 +300,7 @@
     </p>
     <p>
         &copy; Copyright 2018, Yukihiro Okada.<br/>
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.7.4.<br/>
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.8.6.<br/>
     </p>
   </div>
 </footer>
