@@ -10,7 +10,7 @@ packages = [{include = "yuokada"}]
 [tool.poetry.dependencies]
 python = "^3.9"
 certifi = "^2023.7.22"
-sphinx = "5.3.0"
+sphinx = "6.2.1"
 sphinx-bootstrap-theme = "^0.8.1"
 sphinxtogithub = {git = "https://github.com/proycon/sphinx-to-github.git", rev = "9b61be70ccfbec99724544c3e94ed1c43fb5295c"}
 
