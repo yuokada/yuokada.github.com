@@ -1,16 +1,16 @@
 <!DOCTYPE html>
 
-<html lang="en">
+<html lang="en" data-content_root="../">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
     <title>Cyberduckからs3につないでみる &#8212; my blog 2018.070401 documentation</title>
-    <link rel="stylesheet" type="text/css" href="../static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../static/bootstrap-sphinx.css" />
-    <script data-url_root="../" id="documentation_options" src="../static/documentation_options.js"></script>
-    <script src="../static/doctools.js"></script>
-    <script src="../static/sphinx_highlight.js"></script>
+    <link rel="stylesheet" type="text/css" href="../static/pygments.css?v=b76e3c8a" />
+    <link rel="stylesheet" type="text/css" href="../static/bootstrap-sphinx.css?v=9f61996d" />
+    <script src="../static/documentation_options.js?v=6adf4b9f"></script>
+    <script src="../static/doctools.js?v=888ff710"></script>
+    <script src="../static/sphinx_highlight.js?v=dc90522c"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
 <meta charset='utf-8'>
@@ -118,23 +118,23 @@
     <div class="body col-md-12 content" role="main">
       
   <section id="cyberducks3">
-<h1>Cyberduckからs3につないでみる<a class="headerlink" href="#cyberducks3" title="Permalink to this heading">¶</a></h1>
+<h1>Cyberduckからs3につないでみる<a class="headerlink" href="#cyberducks3" title="Link to this heading">¶</a></h1>
 <p>s3上に用意されているサンプルデータにつないでみる。</p>
 <section id="url">
-<h2>URL<a class="headerlink" href="#url" title="Permalink to this heading">¶</a></h2>
+<h2>URL<a class="headerlink" href="#url" title="Link to this heading">¶</a></h2>
 <ul class="simple">
 <li><p><a class="reference external" href="http://us-east-1.elasticmapreduce.samples.s3.amazonaws.com/">http://us-east-1.elasticmapreduce.samples.s3.amazonaws.com/</a></p></li>
 <li><p><a class="reference external" href="https://aws.amazon.com/jp/blogs/aws/amazon-athena-interactive-sql-queries-for-data-in-amazon-s3/">Amazon Athena – Interactive SQL Queries for Data in Amazon S3 | AWS Blog</a></p></li>
 </ul>
 </section>
 <section id="orc">
-<h2>orc<a class="headerlink" href="#orc" title="Permalink to this heading">¶</a></h2>
+<h2>orc<a class="headerlink" href="#orc" title="Link to this heading">¶</a></h2>
 <ul class="simple">
 <li><p><a class="reference external" href="https://github.com/apache/orc">apache/orc: Mirror of Apache Orc</a></p></li>
 <li><p><a class="reference external" href="https://mvnrepository.com/artifact/org.apache.orc">Maven Repository: org.apache.orc</a></p></li>
 </ul>
 <section id="building">
-<h3>Building<a class="headerlink" href="#building" title="Permalink to this heading">¶</a></h3>
+<h3>Building<a class="headerlink" href="#building" title="Link to this heading">¶</a></h3>
 <p><a class="reference external" href="https://orc.apache.org/docs/building.html">Building ORC</a></p>
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>%<span class="w"> </span><span class="nb">cd</span><span class="w"> </span>java
 %<span class="w"> </span>mvn<span class="w"> </span>package
@@ -142,7 +142,7 @@
 </div>
 </section>
 <section id="check">
-<h3>Check<a class="headerlink" href="#check" title="Permalink to this heading">¶</a></h3>
+<h3>Check<a class="headerlink" href="#check" title="Link to this heading">¶</a></h3>
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="c1"># To get information about an ORC file, use the orcfiledump command.</span>
 %<span class="w"> </span>hive<span class="w"> </span>--orcfiledump<span class="w"> </span>&lt;path_to_file&gt;
 
@@ -152,7 +152,7 @@
 </div>
 </section>
 <section id="java">
-<h3>Java<a class="headerlink" href="#java" title="Permalink to this heading">¶</a></h3>
+<h3>Java<a class="headerlink" href="#java" title="Link to this heading">¶</a></h3>
 <ul>
 <li><div class="line-block">
 <div class="line"><a class="reference external" href="https://orc.apache.org/docs/core-java.html">Using Core Java</a></div>
@@ -163,7 +163,7 @@
 </section>
 </section>
 <section id="links">
-<h2>Links<a class="headerlink" href="#links" title="Permalink to this heading">¶</a></h2>
+<h2>Links<a class="headerlink" href="#links" title="Link to this heading">¶</a></h2>
 <ul class="simple">
 <li><p><a class="reference external" href="https://aws.amazon.com/jp/blogs/aws/amazon-athena-interactive-sql-queries-for-data-in-amazon-s3/">Amazon Athena – Interactive SQL Queries for Data in Amazon S3 | AWS Blog</a></p></li>
 </ul>
@@ -299,7 +299,7 @@
     </p>
     <p>
         &copy; Copyright 2018, Yukihiro Okada.<br/>
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 6.2.1.<br/>
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 7.2.6.<br/>
     </p>
   </div>
 </footer>

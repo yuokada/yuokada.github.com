@@ -1,16 +1,16 @@
 <!DOCTYPE html>
 
-<html lang="en">
+<html lang="en" data-content_root="../">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
     <title>s3について気になったこと &#8212; my blog 2018.070401 documentation</title>
-    <link rel="stylesheet" type="text/css" href="../static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../static/bootstrap-sphinx.css" />
-    <script data-url_root="../" id="documentation_options" src="../static/documentation_options.js"></script>
-    <script src="../static/doctools.js"></script>
-    <script src="../static/sphinx_highlight.js"></script>
+    <link rel="stylesheet" type="text/css" href="../static/pygments.css?v=b76e3c8a" />
+    <link rel="stylesheet" type="text/css" href="../static/bootstrap-sphinx.css?v=9f61996d" />
+    <script src="../static/documentation_options.js?v=6adf4b9f"></script>
+    <script src="../static/doctools.js?v=888ff710"></script>
+    <script src="../static/sphinx_highlight.js?v=dc90522c"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
 <meta charset='utf-8'>
@@ -130,9 +130,9 @@
     <div class="body col-md-12 content" role="main">
       
   <section id="s3">
-<h1>s3について気になったこと<a class="headerlink" href="#s3" title="Permalink to this heading">¶</a></h1>
+<h1>s3について気になったこと<a class="headerlink" href="#s3" title="Link to this heading">¶</a></h1>
 <section id="s3-s3n">
-<h2><cite>s3://</cite> と <cite>s3n://</cite> について<a class="headerlink" href="#s3-s3n" title="Permalink to this heading">¶</a></h2>
+<h2><cite>s3://</cite> と <cite>s3n://</cite> について<a class="headerlink" href="#s3-s3n" title="Link to this heading">¶</a></h2>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>Hadoopは、2種類のファイルシステムをS3向けに提供
 
 - S3 ネイティブ ファイルシステム (URI scheme: s3n)
@@ -156,7 +156,7 @@ S3:// は、AWSストレージクラスター上のS3にマップされた、HDF
 </div>
 <p>see: <a class="reference external" href="http://hideharaaws.hatenablog.com/entry/2013/08/29/160535">EMR利用時のURI Prefix “s3:// “ と “s3n://” の違い - AWS / PHP / Python ちょいメモ</a></p>
 <section id="aws">
-<h3>AWS上の解説<a class="headerlink" href="#aws" title="Permalink to this heading">¶</a></h3>
+<h3>AWS上の解説<a class="headerlink" href="#aws" title="Link to this heading">¶</a></h3>
 <p>2016/12現在だと <cite>s3://</cite> だけ使ってれば問題ないようです。</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>以前は、Amazon EMR は URI スキーム s3n で、S3 ネイティブファイルシステムを使用していました。
 これは現在でも動作しますが、最適なパフォーマンス、セキュリティ、および信頼性のためには、s3 URI スキームを使用することをお勧めします。
@@ -165,7 +165,7 @@ S3:// は、AWSストレージクラスター上のS3にマップされた、HDF
 <p>see: <a class="reference external" href="http://docs.aws.amazon.com/ja_jp/ElasticMapReduce/latest/DeveloperGuide/emr-plan-file-systems.html">Amazon EMR と互換性のあるファイルシステム - Amazon EMR</a></p>
 </section>
 <section id="osshadoop">
-<h3>OSS版のHadoopのオススメ<a class="headerlink" href="#osshadoop" title="Permalink to this heading">¶</a></h3>
+<h3>OSS版のHadoopのオススメ<a class="headerlink" href="#osshadoop" title="Link to this heading">¶</a></h3>
 <p><a class="reference external" href="https://wiki.apache.org/hadoop/AmazonS3">AmazonS3 - Hadoop Wiki</a></p>
 <blockquote>
 <div><p>Recommended: S3A (URI scheme: s3a://) - Hadoop 2.7+</p>
@@ -174,18 +174,18 @@ S3:// は、AWSストレージクラスター上のS3にマップされた、HDF
 </section>
 </section>
 <section id="s3cmd">
-<h2>s3cmd<a class="headerlink" href="#s3cmd" title="Permalink to this heading">¶</a></h2>
+<h2>s3cmd<a class="headerlink" href="#s3cmd" title="Link to this heading">¶</a></h2>
 <p><a class="reference external" href="https://github.com/s3tools/s3cmd">s3tools/s3cmd: Official s3cmd repo – Command line tool for managing Amazon S3 and CloudFront services</a></p>
 <p>python製のs3を操作するためのコマンドラインツール。</p>
 <section id="install">
-<h3>install<a class="headerlink" href="#install" title="Permalink to this heading">¶</a></h3>
+<h3>install<a class="headerlink" href="#install" title="Link to this heading">¶</a></h3>
 <p>s3cmdがpython3対応が完了していないので2.x系でインストールする。</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip2.7<span class="w"> </span>install<span class="w"> </span>s3cmd
 </pre></div>
 </div>
 </section>
 <section id="configure">
-<h3>configure<a class="headerlink" href="#configure" title="Permalink to this heading">¶</a></h3>
+<h3>configure<a class="headerlink" href="#configure" title="Link to this heading">¶</a></h3>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>s3cmd<span class="w"> </span>--configure
 
 <span class="c1"># 実行例</span>
@@ -236,7 +236,7 @@ Configuration<span class="w"> </span>saved<span class="w"> </span>to<span class=
 <p>今回はアップロードしないのでこれでOKそう。</p>
 </section>
 <section id="usage">
-<h3>usage<a class="headerlink" href="#usage" title="Permalink to this heading">¶</a></h3>
+<h3>usage<a class="headerlink" href="#usage" title="Link to this heading">¶</a></h3>
 <ul>
 <li><dl>
 <dt>バケット一覧の取得</dt><dd><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>s3cmd<span class="w"> </span>ls
@@ -279,27 +279,27 @@ delete:<span class="w"> </span><span class="s1">&#39;s3://igudas/swagger.yaml&#3
 </section>
 </section>
 <section id="id1">
-<h2>s3互換ストレージ<a class="headerlink" href="#id1" title="Permalink to this heading">¶</a></h2>
+<h2>s3互換ストレージ<a class="headerlink" href="#id1" title="Link to this heading">¶</a></h2>
 <div class="line-block">
 <div class="line"><a class="reference external" href="https://minio.io/">Minio</a></div>
 <div class="line"><a class="reference external" href="https://github.com/minio/minio">minio/minio: Minio is an Amazon S3 compatible object storage server.</a></div>
 </div>
 <p>Go言語製のs3互換ストレージ。 開発も活発なので使い勝手良さそう。</p>
 <section id="another-one">
-<h3>another one<a class="headerlink" href="#another-one" title="Permalink to this heading">¶</a></h3>
+<h3>another one<a class="headerlink" href="#another-one" title="Link to this heading">¶</a></h3>
 <ul class="simple">
 <li><p><a class="reference external" href="https://github.com/johannesboyne/gofakes3">johannesboyne/gofakes3: A simple fake AWS S3 object storage based on BoltDB (used for local test-runs against AWS S3 APIs)</a></p></li>
 </ul>
 </section>
 </section>
 <section id="links">
-<h2>Links<a class="headerlink" href="#links" title="Permalink to this heading">¶</a></h2>
+<h2>Links<a class="headerlink" href="#links" title="Link to this heading">¶</a></h2>
 <ul class="simple">
 <li><p><a class="reference external" href="http://docs.aws.amazon.com/ja_jp/AmazonS3/latest/dev/Welcome.html">Amazon S3 とは何ですか？ - Amazon Simple Storage Service</a></p></li>
 <li><p><a class="reference external" href="http://docs.aws.amazon.com/ja_jp/AmazonS3/latest/dev/MakingRequests.html">リクエストの実行 - Amazon Simple Storage Service</a></p></li>
 </ul>
 <section id="id2">
-<h3>s3cmd<a class="headerlink" href="#id2" title="Permalink to this heading">¶</a></h3>
+<h3>s3cmd<a class="headerlink" href="#id2" title="Link to this heading">¶</a></h3>
 <ul class="simple">
 <li><p><a class="reference external" href="https://www.faq.idcf.jp/app/answers/detail/a_id/360/~/s3cmd%E3%81%AE%E3%82%B3%E3%83%9E%E3%83%B3%E3%83%89%E4%B8%80%E8%A6%A7">s3cmdのコマンド一覧 | オブジェクトストレージ</a></p></li>
 <li><p><a class="reference external" href="http://recipe.kc-cloud.jp/archives/1059">Amazon S3 編。S3 を s3cmd で操作する方法をご説明 | 使い方・ナレコムAWSクラウド | ナレコムAWSレシピ</a></p></li>
@@ -307,7 +307,7 @@ delete:<span class="w"> </span><span class="s1">&#39;s3://igudas/swagger.yaml&#3
 </ul>
 </section>
 <section id="slides">
-<h3>slides<a class="headerlink" href="#slides" title="Permalink to this heading">¶</a></h3>
+<h3>slides<a class="headerlink" href="#slides" title="Link to this heading">¶</a></h3>
 <ul class="simple">
 <li><p><a class="reference external" href="http://www.slideshare.net/AmazonWebServicesJapan/amazon-s3-66753750">Amazon S3を中心とするデータ分析のベストプラクティス</a></p></li>
 </ul>
@@ -328,7 +328,7 @@ delete:<span class="w"> </span><span class="s1">&#39;s3://igudas/swagger.yaml&#3
     </p>
     <p>
         &copy; Copyright 2018, Yukihiro Okada.<br/>
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 6.2.1.<br/>
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 7.2.6.<br/>
     </p>
   </div>
 </footer>
