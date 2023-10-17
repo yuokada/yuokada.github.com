@@ -154,9 +154,7 @@ doctest:
 push:
 	git submodule foreach git add .
 	git submodule foreach git ci -m "update resource" -a
-	git submodule foreach git push origin gh-pages
-	# cd build/html  && git add . && git commit -a -m "update objects" \
-	# 	 && git push origin gh-pages
-	git add build/html
+	git submodule foreach git push origin HEAD:gh-pages
+	git add build
 	git commit -m "update html"
 	git push origin master
