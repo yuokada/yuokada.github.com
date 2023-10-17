@@ -14,6 +14,9 @@ sphinx = "6.2.1"
 sphinx-bootstrap-theme = "^0.8.1"
 sphinxtogithub = {git = "https://github.com/proycon/sphinx-to-github.git", rev = "9b61be70ccfbec99724544c3e94ed1c43fb5295c"}
 
+[tool.poetry.group.dev.dependencies]
+watchdog = "^3.0.0"
+
 [build-system]
 requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
