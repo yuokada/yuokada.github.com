@@ -23,3 +23,9 @@ $ poetry install --with dev
 # Monitor *.rst files and update html files
 $ watchmedo shell-command --patterns="*.rst" --recursive --wait --command="make html"
 ```
+
+--------
+
+## Links
+
+- [Sphinx Themes Gallery](https://sphinx-themes.org/)
