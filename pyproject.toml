@@ -1,22 +1,18 @@
-[tool.poetry]
+[project]
 name = "yuokada-github-com"
 version = "0.1.0"
 description = ""
-authors = ["Your Name <you@example.com>"]
-license = "MIT"
+authors = [{name = "Your Name", email = "you@example.com"}]
+license = {text = "MIT"}
 readme = "README.md"
-packages = [{include = "yuokada"}]
+requires-python = ">=3.12"
+dependencies = [
+    "certifi>=2025.6.15",
+    "sphinx>=8.2.3",
+    "sphinx-bootstrap-theme>=0.8.1",
+]
 
-[tool.poetry.dependencies]
-python = "^3.12"
-certifi = "^2025.6.15"
-sphinx = "^8.2.3"
-sphinx-bootstrap-theme = "^0.8.1"
-# sphinxtogithub = {git = "https://github.com/proycon/sphinx-to-github.git", rev = "9b61be70ccfbec99724544c3e94ed1c43fb5295c"}
-
-[tool.poetry.group.dev.dependencies]
-watchdog = "^6.0.0"
-
-[build-system]
-requires = ["poetry-core"]
-build-backend = "poetry.core.masonry.api"
+[project.optional-dependencies]
+dev = [
+    "watchdog>=6.0.0",
+]
