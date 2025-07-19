@@ -14,6 +14,8 @@ Install project dependencies:
 $ uv sync
 ```
 
+This project uses [MyST-Parser](https://myst-parser.readthedocs.io/) so you can write documentation in Markdown.
+
 ## Getting started
 
 ```
@@ -28,8 +30,8 @@ $ git clone --recurse-submodules git@github.com:yuokada/yuokada.github.com.git g
 # Install watchdog
 $ uv sync --extra dev
 
-# Monitor *.rst files and update html files
-$ watchmedo shell-command --patterns="*.rst" --recursive --wait --command="make html"
+# Monitor *.rst and *.md files and update html files
+$ watchmedo shell-command --patterns="*.rst;*.md" --recursive --wait --command="make html"
 ```
 
 --------
