@@ -31,7 +31,7 @@ $ git clone --recurse-submodules git@github.com:yuokada/yuokada.github.com.git g
 $ uv sync --extra dev
 
 # Monitor *.rst and *.md files and update html files
-$ watchmedo shell-command --patterns="*.rst;*.md" --recursive --wait --command="make html"
+$ uv run watchmedo shell-command --patterns="*.rst;*.md" --recursive --wait --command="make html"
 ```
 
 --------
