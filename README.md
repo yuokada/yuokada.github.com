@@ -2,8 +2,16 @@
 
 ## github pages
 
+Install uv:
+
 ```shell
-$ poetry install
+$ curl -Ls https://astral.sh/uv/install.sh | sh
+```
+
+Install project dependencies:
+
+```shell
+$ uv sync
 ```
 
 ## Getting started
@@ -18,7 +26,7 @@ $ git clone --recurse-submodules git@github.com:yuokada/yuokada.github.com.git g
 
 ```
 # Install watchdog
-$ poetry install --with dev
+$ uv sync --extra dev
 
 # Monitor *.rst files and update html files
 $ watchmedo shell-command --patterns="*.rst" --recursive --wait --command="make html"
