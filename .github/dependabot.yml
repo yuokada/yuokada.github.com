@@ -12,3 +12,10 @@ updates:
       day: "saturday"
       time: "07:00"
       timezone: "Asia/Tokyo"
+  - package-ecosystem: "uv"
+    directory: "/"
+    schedule:
+      interval: "monthly"
+      day: "saturday"
+      time: "07:00"
+      timezone: "Asia/Tokyo"
