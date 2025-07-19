@@ -10,6 +10,7 @@ dependencies = [
     "certifi>=2025.6.15",
     "sphinx>=8.2.3",
     "sphinx-bootstrap-theme>=0.8.1",
+    "myst-parser>=4.0.0",
 ]
 
 [project.optional-dependencies]
