@@ -27,7 +27,7 @@ jobs:
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip uv
-          uv sync
+          uv pip freeze | sudo pip install -r /dev/stdin
       - name: Build HTML
         run: make html
       - name: Commit built docs
