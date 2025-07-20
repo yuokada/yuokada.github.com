@@ -1,0 +1,43 @@
+name: Build Sphinx Docs
+
+on:
+  push:
+    branches:
+      - master
+  # pull_request:
+  #   branches:
+  #     - master
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          submodules: recursive
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip uv
+          uv export --all-groups --no-hashes |grep -v "urllib\|pyyaml" | pip install --user -r /dev/stdin
+      - name: Build HTML
+        run: make html
+      - name: Commit built docs
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          # git -C build/html remote set-url origin https://x-access-token:${GITHUB_TOKEN}@github.com/${{ github.repository }}.git
+          # git -C build/html fetch origin gh-pages
+          # git -C build/html checkout -B gh-pages origin/gh-pages
+          make push
+
