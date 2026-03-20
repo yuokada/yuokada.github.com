@@ -1,5 +1,5 @@
 ---
-applyTo: "pyproject.toml,source/conf.py"
+applyTo: "pyproject.toml,source/conf.py,Makefile"
 ---
 
 When editing Python or build configuration files in this repository:
